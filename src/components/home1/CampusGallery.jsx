@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
+import studioImg from "../../assets/images/pages/studio.jpeg";
+import schoolOverview from "../../assets/images/pages/schooloverview.jpeg";
+
 
 const CampusGallery = () => {
   // Images selected based on APS Premier Facilities 
@@ -8,7 +11,7 @@ const CampusGallery = () => {
     {
       title: "Outdoor Learning Garden",
       desc: "Eco-grass & shaded decks",
-      img: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1600", // Green outdoor space
+      img: schoolOverview, // Green outdoor space
       colSpan: "md:col-span-2 md:row-span-2", // Big Main Image
       height: "h-96"
     },
@@ -22,7 +25,7 @@ const CampusGallery = () => {
     {
       title: "Art & Imagination Studio",
       desc: "Creative expression space",
-      img: "https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=800", // Art/Drawing
+      img: studioImg,
       colSpan: "md:col-span-1",
       height: "h-48"
     },

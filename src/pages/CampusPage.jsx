@@ -26,6 +26,17 @@ import {
 } from 'react-icons/fa';
 import { GiTeacher, GiSecurityGate, GiBabyFace } from 'react-icons/gi';
 import { MdClass, MdMeetingRoom, MdHealthAndSafety, MdToys } from 'react-icons/md';
+import schoolOverview from "../assets/images/pages/schooloverview.jpeg";
+import schoolInterior from "../assets/images/pages/interior.jpeg";
+import schoolGarden from "../assets/images/pages/garden.jpeg";
+import schoolartStudio from "../assets/images/pages/artstudio.jpeg";
+import schoolPlayArea from "../assets/images/pages/playarea.jpeg";
+import schoolActivityArea from "../assets/images/pages/activity.jpeg";
+import principalOffice from "../assets/images/pages/office.jpeg";
+
+
+
+
 
 const CampusPage = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -94,17 +105,20 @@ const CampusPage = () => {
     {
       title: "Principal's Office",
       icon: FaUserTie,
-      description: "Administrative center for school leadership"
+      description: "Administrative center for school leadership",
+      image:principalOffice
     },
     {
       title: "Elegant Entrance Porch",
       icon: FaDoorOpen,
-      description: "Welcoming entrance with secure access control"
+      description: "Welcoming entrance with secure access control",
+      image:schoolOverview
     },
     {
-      title: "Water-play Corner",
+      title: "Green-play Corner",
       icon: FaTint,
-      description: "Safe water play area for sensory development"
+      description: "Safe water play area for sensory development",
+      image:schoolGarden
     },
     {
       title: "Dedicated Drop-off Lane",
@@ -154,32 +168,38 @@ const CampusPage = () => {
     {
       id: 1,
       title: "Main Entrance",
-      description: "Elegant entrance porch with secure access"
+      description: "Elegant entrance porch with secure access",
+      image: schoolOverview
     },
     {
       id: 2,
       title: "Classroom Interior",
-      description: "Bright and spacious learning environment"
+      description: "Bright and spacious learning environment",
+      image: schoolInterior
     },
     {
       id: 3,
       title: "Outdoor Garden",
-      description: "Eco-friendly outdoor learning space"
+      description: "Eco-friendly outdoor learning space",
+      image: schoolGarden
     },
     {
       id: 4,
       title: "Art Studio",
-      description: "Creative space for artistic expression"
+      description: "Creative space for artistic expression",
+      image: schoolartStudio
     },
     {
       id: 5,
-      title: "Reading Loft",
-      description: "Cozy library and reading area"
+      title: "Activity Area",
+      description: "An activity Area for grooming of students",
+      image: schoolActivityArea
     },
     {
       id: 6,
-      title: "AI Learning Corner",
-      description: "Technology hub for digital learning"
+      title: "PlayArea",
+      description: "A green play area for physical activity of students",
+      image: schoolPlayArea
     }
   ];
 
@@ -204,12 +224,9 @@ const CampusPage = () => {
           <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#D4AF37]/10 animate-pulse-slow"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-[#10B981]/10 animate-float"></div>
         </div>
-        
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center mb-8 animate-slide-in-left">
-            
           </div>
-          
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-6 animate-pulse-gentle border border-[#D4AF37]/30 shadow-sm">
               <FaSchool className="mr-2 text-[#D4AF37]" />
@@ -242,7 +259,6 @@ const CampusPage = () => {
               State-of-the-art facilities designed for holistic development
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {campusHighlights.map((highlight, index) => (
               <div 
@@ -285,7 +301,6 @@ const CampusPage = () => {
               Comprehensive infrastructure supporting every aspect of school life
             </p>
           </div>
-          
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {additionalFacilities.map((facility, index) => (
@@ -305,9 +320,16 @@ const CampusPage = () => {
                       'text-[#10B981]'
                     }`} />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <h4 className="font-bold text-[#29234B] mb-1">{facility.title}</h4>
                     <p className="text-[#29234B]/60 text-sm">{facility.description}</p>
+                    {facility.image && (
+                      <img 
+                        src={facility.image} 
+                        alt={facility.title} 
+                        className="mt-3 w-full h-32 object-cover rounded-lg shadow-sm border border-gray-100" 
+                      />
+                    )}
                   </div>
                 </div>
               ))}
@@ -325,7 +347,6 @@ const CampusPage = () => {
               Comprehensive security measures for complete peace of mind
             </p>
           </div>
-          
           <div className="bg-gradient-to-r from-[#29234B] to-[#3D366A] rounded-2xl p-8 text-white">
             <div className="flex items-center mb-8">
               <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mr-4">
@@ -335,7 +356,6 @@ const CampusPage = () => {
                 Security Features
               </h3>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {safetyFeatures.map((feature, index) => (
                 <div 
@@ -353,7 +373,6 @@ const CampusPage = () => {
                 </div>
               ))}
             </div>
-            
             <div className="mt-8 pt-6 border-t border-white/20">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="flex items-center">
@@ -385,19 +404,14 @@ const CampusPage = () => {
               Explore our modern learning spaces and facilities
             </p>
           </div>
-          
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-            {/* Main Image Display */}
             <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-6">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#29234B] to-[#3D366A] animate-pulse-subtle"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <FaImages className="text-white/30 text-6xl mb-4 mx-auto" />
-                  <p className="text-white/60 font-heading text-xl">Campus Images Coming Soon</p>
-                  <p className="text-white/40 text-sm mt-2">Photo gallery will be updated regularly</p>
-                </div>
-              </div>
-              
+              <img 
+                src={campusImages[activeImage].image} 
+                alt={campusImages[activeImage].title} 
+                className="w-full h-full object-cover rounded-xl"
+              />
+
               {/* Navigation Buttons */}
               <button 
                 onClick={handlePrevImage}
@@ -411,7 +425,7 @@ const CampusPage = () => {
               >
                 <FaChevronRight />
               </button>
-              
+
               {/* Image Info */}
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -419,7 +433,7 @@ const CampusPage = () => {
                   <p className="text-white/80 text-sm">{campusImages[activeImage].description}</p>
                 </div>
               </div>
-              
+
               {/* Expand Button */}
               <button 
                 onClick={() => setIsGalleryOpen(true)}
@@ -428,377 +442,32 @@ const CampusPage = () => {
                 <FaExpand />
               </button>
             </div>
-            
-            {/* Thumbnail Strip */}
-            <div className="flex space-x-4 overflow-x-auto pb-2">
-              {campusImages.map((image, index) => (
-                <button
-                  key={image.id}
-                  onClick={() => setActiveImage(index)}
-                  className={`flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden ${
-                    activeImage === index 
-                      ? 'ring-2 ring-[#D4AF37] ring-offset-2' 
-                      : 'opacity-70 hover:opacity-100'
-                  } transition-all duration-300`}
-                >
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <FaImages className="text-gray-400" />
-                  </div>
-                </button>
-              ))}
-            </div>
           </div>
         </div>
 
-        {/* Map & Location Section */}
+        {/* Campus Location Map */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#29234B] mb-4 animate-text-focus">
-              Location & Directions
+              Campus Location
             </h2>
             <p className="text-lg text-[#29234B]/60 max-w-2xl mx-auto animate-text-slide">
-              Conveniently located in University Town with easy access
+              Find us easily in University Town, Peshawar
             </p>
           </div>
-          
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-            <div className="md:flex">
-              {/* Map Placeholder */}
-              <div className="md:w-2/3 bg-gradient-to-br from-gray-100 to-gray-200 p-8 flex flex-col items-center justify-center min-h-64">
-                <div className="text-center">
-                  <FaMap className="text-[#29234B]/30 text-5xl mb-4 mx-auto" />
-                  <h3 className="font-heading text-2xl font-bold text-[#29234B] mb-2">Campus Location</h3>
-                  <p className="text-[#29234B]/60 mb-6">University Town, Peshawar</p>
-                  <div className="inline-flex items-center px-4 py-2 bg-[#29234B] text-white rounded-lg">
-                    <FaMapMarkerAlt className="mr-2" />
-                    View on Google Maps
-                  </div>
-                </div>
-              </div>
-              
-              {/* Directions Info */}
-              <div className="md:w-1/3 bg-gradient-to-b from-[#FAFAFA] to-white p-8">
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <FaParking className="text-[#D4AF37] text-xl mr-3 mt-1" />
-                    <div>
-                      <h4 className="font-bold text-[#29234B] mb-1">Parking Facilities</h4>
-                      <p className="text-[#29234B]/60 text-sm">Designated parking for parents and staff</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <FaShieldAlt className="text-[#10B981] text-xl mr-3 mt-1" />
-                    <div>
-                      <h4 className="font-bold text-[#29234B] mb-1">Approach Notes</h4>
-                      <p className="text-[#29234B]/60 text-sm">Controlled access through main gate only</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <GiSecurityGate className="text-[#29234B] text-xl mr-3 mt-1" />
-                    <div>
-                      <h4 className="font-bold text-[#29234B] mb-1">Drop-off Zone</h4>
-                      <p className="text-[#29234B]/60 text-sm">Dedicated lane for safe pick-up/drop-off</p>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-4 border-t border-gray-200">
-                    <h4 className="font-bold text-[#29234B] mb-2">Visiting Hours</h4>
-                    <p className="text-[#29234B]/60 text-sm">8:00 AM - 4:00 PM (By appointment only)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="bg-gradient-to-r from-[#29234B] via-[#3D366A] to-[#29234B] rounded-2xl p-8 md:p-12 text-center animate-pulse-gentle">
-          <div className="max-w-3xl mx-auto">
-            <FaSchool className="text-[#D4AF37] text-4xl mb-6 mx-auto animate-bounce-slow" />
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4 animate-text-focus">
-              Schedule a Campus Tour
-            </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-              Experience our premium facilities firsthand. Book a personalized tour to see how APS Premier provides the perfect environment for your child's growth and development.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/campusadmissionspage"
-                className="bg-gradient-to-r from-[#D4AF37] to-[#C19C2E] text-[#29234B] px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 shadow-lg animate-pulse-soft"
-              >
-                Book Campus Tour
-              </Link>
-              <Link 
-                to="/contact"
-                className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/15 hover:scale-[1.02] transition-all duration-300 animate-bounce-subtle"
-              >
-                Contact Admissions
-              </Link>
-            </div>
+          <div className="md:w-2/3 p-8 mx-auto">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.128177958449!2d71.5126!3d34.0123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d92721e8a9b3f3%3A0xabcdef1234567890!2sUniversity%20Town%2C%20Peshawar!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              title="Campus Location"
+            ></iframe>
           </div>
         </div>
       </div>
-
-      {/* Custom CSS for animations */}
-      <style>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slide-in-left {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slide-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes scale-in {
-          from {
-            opacity: 0;
-            transform: scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        
-        @keyframes pulse-gentle {
-          0%, 100% {
-            opacity: 1;
-          }
-          50% {
-            opacity: 0.8;
-          }
-        }
-        
-        @keyframes pulse-subtle {
-          0%, 100% {
-            opacity: 0.7;
-          }
-          50% {
-            opacity: 1;
-          }
-        }
-        
-        @keyframes pulse-soft {
-          0%, 100% {
-            box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.3);
-          }
-          70% {
-            box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
-          }
-        }
-        
-        @keyframes spin-slow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-        
-        @keyframes bounce-slow {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-5px);
-          }
-        }
-        
-        @keyframes bounce-subtle {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-3px);
-          }
-        }
-        
-        @keyframes text-focus {
-          from {
-            letter-spacing: -0.5px;
-            opacity: 0.7;
-          }
-          to {
-            letter-spacing: normal;
-            opacity: 1;
-          }
-        }
-        
-        @keyframes text-slide {
-          from {
-            transform: translateX(-10px);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-        
-        @keyframes glow {
-          0%, 100% {
-            box-shadow: 0 0 5px rgba(212, 175, 55, 0.1);
-          }
-          50% {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-          }
-        }
-        
-        @keyframes card-float {
-          0%, 100% {
-            transform: translateY(0) rotate(0);
-          }
-          50% {
-            transform: translateY(-5px) rotate(0.5deg);
-          }
-        }
-        
-        @keyframes rotate-slow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-        
-        @keyframes row-enter {
-          from {
-            opacity: 0;
-            transform: translateX(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes section-enter {
-          from {
-            opacity: 0;
-            transform: translateY(30px) scale(0.98);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.6s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-left {
-          animation: slide-in-left 0.6s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-right {
-          animation: slide-in-right 0.6s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-scale-in {
-          animation: scale-in 0.5s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        
-        .animate-pulse-gentle {
-          animation: pulse-gentle 2s ease-in-out infinite;
-        }
-        
-        .animate-pulse-subtle {
-          animation: pulse-subtle 3s ease-in-out infinite;
-        }
-        
-        .animate-pulse-soft {
-          animation: pulse-soft 2s infinite;
-        }
-        
-        .animate-spin-slow {
-          animation: spin-slow 20s linear infinite;
-        }
-        
-        .animate-bounce-slow {
-          animation: bounce-slow 2s ease-in-out infinite;
-        }
-        
-        .animate-bounce-subtle {
-          animation: bounce-subtle 2s ease-in-out infinite;
-        }
-        
-        .animate-text-focus {
-          animation: text-focus 0.8s ease-out forwards;
-        }
-        
-        .animate-text-slide {
-          animation: text-slide 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-glow {
-          animation: glow 2s ease-in-out infinite;
-        }
-        
-        .animate-card-float {
-          animation: card-float 3s ease-in-out infinite;
-        }
-        
-        .animate-rotate-slow {
-          animation: rotate-slow 30s linear infinite;
-        }
-        
-        .animate-row-enter {
-          animation: row-enter 0.5s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-section-enter {
-          animation: section-enter 0.7s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 };
