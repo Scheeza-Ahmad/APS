@@ -4,7 +4,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import studioImg from "../../assets/images/pages/studio.jpeg";
 import schoolOverview from "../../assets/images/pages/schooloverview.jpeg";
 
-
 const CampusGallery = () => {
   // Images selected based on APS Premier Facilities 
   const facilities = [
