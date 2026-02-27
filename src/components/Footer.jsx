@@ -69,8 +69,6 @@ const Footer = () => {
               {[
                 { icon: FaFacebookF, href: '#' },
                 { icon: FaInstagram, href: '#' },
-                { icon: FaTwitter, href: '#' },
-                { icon: FaYoutube, href: '#' },
                 { icon: FaLinkedinIn, href: '#' }
               ].map((social, idx) => (
                 <a
@@ -184,9 +182,9 @@ const Footer = () => {
                   <span className="block text-primary font-bold text-sm mb-1">Our Campus</span>
                   <span className="text-gray-600 text-sm">
                     {/* Content from Doc [cite: 189-190] */}
-                    Haji Ghaljai Kalai, Afridi Road,<br />
-                    Mera Mashogaggar, Badaber,<br />
-                    Peshawar, Pakistan
+                    29 C 17 Circular Road,<br />
+                    University Town,<br />
+                    Peshawar, Pakistan, 25000
                   </span>
                 </div>
               </li>
@@ -198,8 +196,8 @@ const Footer = () => {
                 <div>
                   <span className="block text-primary font-bold text-sm mb-1">Phone</span>
                   {/* Content from Doc [cite: 191] */}
-                  <a href="tel:+9291XXXXXXX" className="text-gray-600 hover:text-secondary text-sm transition-colors duration-300">
-                    +92 91 XXXXXXX
+                  <a href="tel:+92915700035" className="text-gray-600 hover:text-secondary text-sm transition-colors duration-300">
+                    +92 91 5700035
                   </a>
                 </div>
               </li>
@@ -211,8 +209,8 @@ const Footer = () => {
                 <div>
                   <span className="block text-primary font-bold text-sm mb-1">Email</span>
                   {/* Content from Doc [cite: 192] */}
-                  <a href="mailto:info@alipublicschool.com.pk" className="text-gray-600 hover:text-secondary text-sm transition-colors duration-300">
-                    info@alipublicschool.com.pk
+                  <a href="mailto:principal@apspremier.com" className="text-gray-600 hover:text-secondary text-sm transition-colors duration-300">
+                    principal@apspremier.com
                   </a>
                 </div>
               </li>
@@ -220,7 +218,7 @@ const Footer = () => {
               {/* WhatsApp Button */}
               <li className="pt-4">
                 <a
-                  href="https://wa.me/923001234567"
+                  href="https://wa.me/923408700002"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#20bd5a] transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -245,7 +243,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6">
-              {['Terms of Use', 'Privacy Policy', 'Sitemap'].map((item) => (
+              {[ 'Privacy Policy'].map((item) => (
                 <Link
                   key={item}
                   to={`/${item.toLowerCase().replace(' ', '')}`}

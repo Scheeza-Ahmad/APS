@@ -457,7 +457,7 @@ const CampusPage = () => {
           </div>
           <div className="md:w-2/3 p-8 mx-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.128177958449!2d71.5126!3d34.0123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d92721e8a9b3f3%3A0xabcdef1234567890!2sUniversity%20Town%2C%20Peshawar!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s"
+              src="https://www.google.com/maps/dir//29+c,+17+Circular+Rd,+University+Town,+Peshawar,+Pakistan/@33.9921659,71.4982052,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x38d9173f6eecd563:0xcf1df657ef2ad020!2m2!1d71.4973898!2d33.9902319?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="350"
               style={{ border: 0 }}
