@@ -17,16 +17,9 @@ import LegacyPage from "./pages/LegacyPage";
 import CharacterValues from "./pages/CharacterValues";
 import StudentLife from "./pages/StudentLife";
 import NewsUpdates from "./pages/NewsUpdates";
+import ContactPage from './pages/Contact';  
 
-// Placeholder for Contact
-const ContactPage = () => (
-  <div className="min-h-screen flex items-center justify-center py-20">
-    <div className="text-center">
-      <h1 className="text-4xl text-secondary mb-4">Contact Page</h1>
-      <p className="text-gray-300">Coming Soon</p>
-    </div>
-  </div>
-);
+
 
 // Simple Layout jo har page ke liye header aur footer show kare
 const DefaultLayout = ({ children }) => {
