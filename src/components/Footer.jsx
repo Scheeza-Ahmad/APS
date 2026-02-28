@@ -67,9 +67,9 @@ const Footer = () => {
             {/* Social Icons (Colors updated for white bg) */}
             <div className="flex gap-3 pt-4">
               {[
-                { icon: FaFacebookF, href: '#' },
-                { icon: FaInstagram, href: '#' },
-                { icon: FaLinkedinIn, href: '#' }
+                { icon: FaFacebookF, href: 'https://www.facebook.com/share/1AkGpWRL7L/?mibextid=wwXIfr' },
+                { icon: FaInstagram, href: 'https://www.instagram.com/apspremier.official?igsh=aGNjeWZzMnV0czd2&utm_source=qr' },
+                { icon: FaLinkedinIn, href: 'https://www.linkedin.com/company/ali-public-school-premier-campus/' }
               ].map((social, idx) => (
                 <a
                   key={idx}
