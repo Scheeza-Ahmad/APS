@@ -209,21 +209,21 @@ const Contact = () => {
                   <div className="flex-shrink-0 text-secondary text-2xl mr-4 transition-transform group-hover:scale-110">📍</div>
                   <div className="font-body text-gray-700">
                     <p className="font-medium">Address</p>
-                    <p className="text-gray-600">Haji Ghaljai Kalai, Afridi Road, Mera Mashogaggar, Badaber, Peshawar, Pakistan</p>
+                    <p className="text-gray-600">29 C 17 Circular Road, University Town, Peshawar, Peshawar, Pakistan, 25000</p>
                   </div>
                 </div>
                 <div className="flex items-start group">
                   <div className="flex-shrink-0 text-secondary text-2xl mr-4 transition-transform group-hover:scale-110">📞</div>
                   <div className="font-body text-gray-700">
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+92 91 5700035</p>
                   </div>
                 </div>
                 <div className="flex items-start group">
                   <div className="flex-shrink-0 text-secondary text-2xl mr-4 transition-transform group-hover:scale-110">✉️</div>
                   <div className="font-body text-gray-700">
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-600">info@alipublicschool.com.pk</p>
+                    <p className="text-gray-600">principal@apspremier.com</p>
                   </div>
                 </div>
                 <div className="flex items-start group">
@@ -241,9 +241,19 @@ const Contact = () => {
               <h2 className="text-2xl font-subheading font-semibold text-secondary mb-4 uppercase tracking-wide">
                 Our Location
               </h2>
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center text-gray-500 overflow-hidden relative group">
-                <span className="z-10 font-body">Map will be embedded here</span>
-                <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className="bg-gray-200 rounded-lg h-64 overflow-hidden relative group">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105663.07842777124!2d71.45873760447192!3d33.95758253683669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917b90f0e79cf%3A0xa816b2637f8ce148!2sPeshawar%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1716301323363!5m2!1sen!2s" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="relative z-10"
+                ></iframe>
+                {/* Pointer events none add kiya hai takay map scroll/zoom pe masla na kare aur animation bhi chalti rahe */}
+                <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none z-20"></div>
               </div>
             </div>
           </div>
