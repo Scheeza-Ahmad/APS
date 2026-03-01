@@ -1,4 +1,5 @@
 import React from 'react';
+import campusTour from "../../assets/videos/campustour.mp4";
 
 const VisitUs = () => {
     return (
@@ -66,13 +67,13 @@ const VisitUs = () => {
                                             <span className="w-2 h-2 md:w-3 md:h-3 bg-emerald/20 rounded-full mr-1 md:mr-2 flex items-center justify-center">
                                                 <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-emerald rounded-full"></span>
                                             </span>
-                                            +92 42 111-APS-EDU
+                                            +92 91 5700035
                                         </p>
                                         <p className="text-gray-600 text-xs md:text-sm flex items-center">
                                             <span className="w-2 h-2 md:w-3 md:h-3 bg-emerald/20 rounded-full mr-1 md:mr-2 flex items-center justify-center">
                                                 <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-emerald rounded-full"></span>
                                             </span>
-                                            admissions@apspremier.edu.pk
+                                            principal@apspremier.com
                                         </p>
                                     </div>
                                 </div>
@@ -99,29 +100,23 @@ const VisitUs = () => {
                                 <p className="text-white/90 mt-1 md:mt-2 text-sm md:text-base">Experience our campus from anywhere</p>
                             </div>
 
-                            {/* Tour Preview */}
+                            {/* Tour Preview with Actual Video */}
                             <div className="p-4 md:p-6 lg:p-8">
-                                <div className="aspect-video bg-cream rounded-lg md:rounded-xl border-2 border-dashed border-gold-20 flex flex-col items-center justify-center mb-4 md:mb-6 animate-pulse-slow">
-                                    <div className="text-center p-4 md:p-6 lg:p-8">
-                                        <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 animate-float">
-                                            <span className="text-2xl md:text-3xl lg:text-4xl">🏫</span>
-                                        </div>
-                                        <p className="text-primary font-semibold text-base md:text-lg mb-1 md:mb-2">360° Interactive Experience</p>
-                                        <p className="text-gray-600 text-xs md:text-sm">Click play to explore our facilities</p>
-                                    </div>
+                                <div className="aspect-video bg-black rounded-lg md:rounded-xl border border-gold-20 overflow-hidden mb-4 md:mb-6">
+                                    <video 
+                                        className="w-full h-full object-cover"
+                                        src={campusTour} 
+                                        autoPlay 
+                                        loop 
+                                        muted 
+                                        controls // Yeh volume, play/pause aur full screen ka option dega
+                                        playsInline // Mobile pe theek chalne ke liye
+                                    />
                                 </div>
 
                                 <div className="space-y-3 md:space-y-4">
-                                    <button className="w-full py-3 md:py-4 bg-gradient-to-r from-secondary to-gold text-primary font-bold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-sm md:text-base group">
-                                        <svg className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                                        </svg>
-                                        <span>Start Virtual Tour</span>
-                                        <svg className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </button>
-
+                                    {/* Yahan se Start Virtual Tour ka button remove kar diya gaya hai */}
+                                    
                                     <div className="grid grid-cols-2 gap-2 md:gap-3">
                                         <button className="py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
                                             Photo Gallery
