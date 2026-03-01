@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import earlyedu from "../../assets/images/pages/earlyedu.jpeg";
+import schoolFront from "../../assets/images/pages/schoolfront.png";
+import interior from "../../assets/images/pages/interior.jpeg";
+import greenry from "../../assets/images/pages/greenry.png";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,28 +12,28 @@ const HeroSection = () => {
   const slides = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600",
+      image: schoolFront,
       title: "WELCOME TO",
       highlight: "APS PREMIER",
       subtitle: "A Modern Primary School for a New Generation with British-inspired design."
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1600",
+      image: earlyedu,
       title: "NURTURING",
       highlight: "FUTURE LEADERS",
       subtitle: "Empowering young minds with curiosity, confidence, and compassion."
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600",
+      image: interior,
       title: "PURPOSE-BUILT",
       highlight: "LEARNING",
       subtitle: "Crafted to give every child the best start in life with smart tools."
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1600",
+      image: greenry,
       title: "ROOTED IN",
       highlight: "EXCELLENCE",
       subtitle: "Building on 13 years of educational heritage and strong values."
@@ -54,33 +58,26 @@ const HeroSection = () => {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         >
-          {/* Image with 100vw width fix */}
+          {/* ✅ CHANGE HERE: Inline styles hata kar Tailwind ki responsive classes (object-cover object-center) lagayi hain */}
           <img
             src={slide.image}
             alt={slide.highlight}
-            className="w-full h-full object-cover min-w-full transform scale-105 transition-transform duration-[10000ms] ease-linear"
-            style={{ 
-              width: '100vw',
-              minWidth: '100%',
-              left: '50%',
-              transform: index === currentSlide ? 'translateX(-50%) scale(1.1)' : 'translateX(-50%) scale(1.0)',
-              position: 'absolute'
-            }}
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[10000ms] ease-linear ${
+              index === currentSlide ? 'scale-110' : 'scale-100'
+            }`}
           />
-          {/* Professional Overlay */}
+          {/* Neutral dark overlay */}
           <div 
-            className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/30 mix-blend-multiply"
-            style={{ width: '100vw' }}
+            className="absolute inset-0 w-full h-full bg-black/40"
           ></div>
         </div>
       ))}
 
       {/* --- CONTENT CONTAINER --- */}
       <div className="absolute inset-0 flex flex-col justify-center z-20">
-        {/* ✅ CONTENT KO THORA UPR LE JAYEIN */}
-        <div className="w-full px-6 sm:px-10 md:px-16 lg:px-24 mt-8"> {/* mt-8 added */}
+        <div className="w-full px-6 sm:px-10 md:px-16 lg:px-24 mt-8"> 
           <div className="w-full md:w-3/4 lg:w-2/3">
             
             {/* Tagline */}
@@ -102,10 +99,10 @@ const HeroSection = () => {
               {slides[currentSlide].subtitle}
             </p>
 
-            {/* ✅ SINGLE CTA BUTTON (Updated) */}
+            {/* CTA BUTTON */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-500">
                 <Link to="/admissions" className="bg-secondary text-primary font-subheading font-bold py-3 px-10 rounded shadow-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 text-center">
-                    Admissions 2025
+                    Admissions 2026
                 </Link>
             </div>
 

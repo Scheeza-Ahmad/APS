@@ -2,36 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import studioImg from "../../assets/images/pages/studio.jpeg";
-import schoolOverview from "../../assets/images/pages/schooloverview.jpeg";
+import classroom from "../../assets/images/pages/interior.jpeg";
+import greenry from "../../assets/images/pages/greenry.png";
+import learningCorner from "../../assets/images/pages/learningcorner.png";
+
+
 
 const CampusGallery = () => {
-  // Images selected based on APS Premier Facilities 
+  // Aapki batayi hui 4 nayi facilities
   const facilities = [
     {
-      title: "Outdoor Learning Garden",
-      desc: "Eco-grass & shaded decks",
-      img: schoolOverview, // Green outdoor space
+      title: "State-of-the-Art Classrooms",
+      desc: "Bright, spacious, and modern learning environments",
+      img: classroom, // Yahan aap apni classroom ki image laga sakti hain
       colSpan: "md:col-span-2 md:row-span-2", // Big Main Image
       height: "h-96"
     },
     {
-      title: "Reading Loft & Library",
-      desc: "Cozy nooks for storytelling",
-      img: "https://images.unsplash.com/photo-1519682577862-22b62b24e420?q=80&w=800", // Library/Books
+      title: "Modern Cafeteria",
+      desc: "Clean, hygienic, and healthy food options",
+      img: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=800", // Canteen ki dummy image
       colSpan: "md:col-span-1",
       height: "h-48"
     },
     {
-      title: "Art & Imagination Studio",
-      desc: "Creative expression space",
-      img: studioImg,
+      title: "Spacious Playground",
+      desc: "Safe and fun outdoor sports activities",
+      img: greenry, // Yahan playground ki image lagayein
       colSpan: "md:col-span-1",
       height: "h-48"
     },
     {
-      title: "AI & Digital Corner",
-      desc: "Smart boards & tech tools",
-      img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800", // Computer/Tech
+      title: "Interactive Learning Corners",
+      desc: "Dedicated spaces for creative activities",
+      img: learningCorner, // Learning corner ki dummy image
       colSpan: "md:col-span-2",
       height: "h-48"
     },
@@ -51,7 +55,7 @@ const CampusGallery = () => {
               A PURPOSE-BUILT MODERN SCHOOL
             </h2>
             <p className="text-gray-600 font-body text-lg leading-relaxed">
-              Designed to feel safe, warm, and inspiring. From reading lofts to outdoor gardens, every corner fosters curiosity.
+              Designed to feel safe, warm, and inspiring. From modern classrooms to spacious playgrounds, every corner fosters curiosity.
             </p>
           </div>
           

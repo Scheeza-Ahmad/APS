@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaCheckCircle, FaHistory } from 'react-icons/fa';
+import schoolimage from "../../assets/images/pages/schoolfront.png";
 
 const WhoWeAre = () => {
   // Key Highlights from your text
@@ -23,7 +24,7 @@ const WhoWeAre = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
               <img 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800" 
+                src={schoolimage}
                 alt="APS Campus Life" 
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
               />

@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import campus from "../../assets/images/pages/schoolfront.png";
+import earlyEducation from "../../assets/images/pages/earlyeducation.png";
+import admission from "../../assets/images/pages/admission.png";
+
+
 
 const ExploreGrid = () => {
   // Content sourced strictly from APS Premier Document [cite: 153, 150]
   const cards = [
     { 
       title: "Early Years (Ages 3–7)", 
-      img: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=800", // Young kid playing/learning
+      img: earlyEducation, // Young kid playing/learning
       link: "/academicspage",
       desc: "Phonics, nature play, and creative expression."
     },
@@ -18,13 +23,13 @@ const ExploreGrid = () => {
     },
     { 
       title: "Campus & Facilities", 
-      img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800", // Modern library/space
+      img: campus, // Modern library/space
       link: "/campuspage",
       desc: "AI corners, reading lofts, and outdoor learning gardens."
     },
     { 
-      title: "Admissions 2025", 
-      img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800", // Welcoming/Handshake
+      title: "Admissions 2026", 
+      img: admission, // Welcoming/Handshake
       link: "/campusadmissionspage",
       desc: "Join a community grounded in kindness and confidence."
     },

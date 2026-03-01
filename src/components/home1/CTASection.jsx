@@ -21,7 +21,7 @@ const CTASection = () => {
             {/* Heading: Deep Purple */}
             <h2 className="font-heading text-4xl md:text-5xl text-primary font-bold mb-4 leading-tight">
               LIMITED SEATS FOR <br/>
-              <span className="text-secondary">ADMISSIONS 2025</span>
+              <span className="text-secondary">ADMISSIONS 2026</span>
             </h2>
             
             <p className="font-body text-gray-600 text-base md:text-lg leading-relaxed mb-8 lg:mb-0">

@@ -40,7 +40,7 @@ const Home1 = () => {
           <CampusGallery />
           <AcademicsSection />
           <CTASection />
-          <NewsGrid />
+          {/* <NewsGrid /> */}
           <PrincipalMessage />
           <LegacyTeaser/>
           <CharacterIntro/>
