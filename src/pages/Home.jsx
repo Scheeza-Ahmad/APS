@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+
 import Home1 from "./home1"
 const Home = () => {
   useEffect(() => {
@@ -56,7 +57,7 @@ const Home = () => {
 
           <div className="mb-3 sm:mb-4 md:mb-6 animate-slide-up w-full">
             <p className="font-subheading text-secondary uppercase font-bold tracking-wide text-xs sm:text-sm md:text-base">
-              Excellence in Education Since 1985
+              Excellence in Education Since 2012
             </p>
           </div>
 
