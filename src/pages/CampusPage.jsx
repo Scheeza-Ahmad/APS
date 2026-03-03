@@ -26,15 +26,14 @@ import {
 } from 'react-icons/fa';
 import { GiTeacher, GiSecurityGate, GiBabyFace } from 'react-icons/gi';
 import { MdClass, MdMeetingRoom, MdHealthAndSafety, MdToys } from 'react-icons/md';
-import schoolOverview from "../assets/images/pages/schooloverview.jpeg";
-import schoolInterior from "../assets/images/pages/interior.jpeg";
-import schoolGarden from "../assets/images/pages/garden.jpeg";
+import schoolOverview from "../assets/images/pages/board.png";
+import classInterior from "../assets/images/pages/interior.jpeg";
+import schoolInterior from "../assets/images/pages/schoolfront.png";
+import schoolGarden from "../assets/images/pages/greenry.png";
 import schoolartStudio from "../assets/images/pages/artstudio.jpeg";
-import schoolPlayArea from "../assets/images/pages/playarea.jpeg";
+import schoolCanteen from "../assets/images/pages/canteen.png";
 import schoolActivityArea from "../assets/images/pages/activity.jpeg";
 import principalOffice from "../assets/images/pages/office.jpeg";
-
-
 
 
 
@@ -171,36 +170,37 @@ const CampusPage = () => {
       description: "Elegant entrance porch with secure access",
       image: schoolOverview
     },
-    {
+        {
       id: 2,
-      title: "Classroom Interior",
-      description: "Bright and spacious learning environment",
+      title: "School Interior",
+      description: "A very good learning environment",
       image: schoolInterior
     },
     {
       id: 3,
+      title: "Classroom Interior",
+      description: "Bright and spacious learning environment",
+      image: classInterior
+    },
+    {
+      id: 4,
       title: "Outdoor Garden",
       description: "Eco-friendly outdoor learning space",
       image: schoolGarden
     },
     {
-      id: 4,
-      title: "Art Studio",
-      description: "Creative space for artistic expression",
-      image: schoolartStudio
+      id: 5,
+      title: "Canteen",
+      description: "A canteen with quality food",
+      image: schoolCanteen
     },
     {
-      id: 5,
+      id: 6,
       title: "Activity Area",
       description: "An activity Area for grooming of students",
       image: schoolActivityArea
     },
-    {
-      id: 6,
-      title: "PlayArea",
-      description: "A green play area for physical activity of students",
-      image: schoolPlayArea
-    }
+
   ];
 
   const handleNextImage = () => {
