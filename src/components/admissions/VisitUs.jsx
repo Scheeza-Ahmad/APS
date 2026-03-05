@@ -1,141 +1,138 @@
 import React from 'react';
 import campusTour from "../../assets/videos/campustour.mp4";
 import { Link } from 'react-router-dom';
+
 const VisitUs = () => {
     return (
-        <div className="py-12 md:py-16 lg:py-20 bg-cream">
+        /* Padding ko mobile par thoda kam kiya hai taake screen space bache */
+        <div className="py-12 md:py-20 lg:py-24 bg-cream overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <div className="animate-slide-up">
+                
+                {/* Grid: Mobile pe 1 column, LG pe 2 columns. Gap ko screens ke mutabiq adjust kiya hai */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    
+                    {/* --- Left Column: Text Content --- */}
+                    <div className="order-2 lg:order-1 animate-slide-up">
                         <div className="inline-flex items-center mb-4 md:mb-6">
-                            <div className="w-8 h-1 md:w-12 md:h-1 bg-secondary mr-2 md:mr-3"></div>
-                            <span className="text-secondary font-semibold text-sm md:text-base">VISIT US</span>
+                            <div className="w-8 h-1 md:w-12 bg-secondary mr-3"></div>
+                            <span className="text-secondary font-bold text-xs md:text-sm tracking-widest uppercase">VISIT US</span>
                         </div>
 
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary mb-4 md:mb-6">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4 md:mb-6 leading-tight">
                             Explore Our <span className="text-secondary">Purpose-Built</span> Campus
                         </h2>
 
-                        <p className="text-gray-600 mb-6 md:mb-8 font-body text-sm md:text-base lg:text-lg leading-relaxed">
-                            Schedule an appointment to tour our modern facilities designed for 21st-century learning.
+                        <p className="text-gray-600 mb-8 font-body text-sm md:text-base lg:text-lg leading-relaxed max-w-xl">
+                            Schedule an appointment to tour our modern facilities designed for 21st-century learning. Experience the environment where your child's future begins.
                         </p>
 
-                        <div className="space-y-4 md:space-y-6">
-                            <div className="flex items-start space-x-3 md:space-x-4 animate-fade-in animation-delay-300">
-                                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                                    <span className="text-xl md:text-2xl text-primary">📍</span>
+                        {/* Icons List: Icons ka size aur spacing mobile ke liye adjust ki hai */}
+                        <div className="space-y-6 md:space-y-8">
+                            
+                            {/* Location Item */}
+                            <div className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 md:w-14 md:h-14 bg-white shadow-sm rounded-xl flex items-center justify-center flex-shrink-0 border border-gold-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span className="text-2xl">📍</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-primary mb-1 md:mb-2 text-base md:text-lg">Multiple Locations</h4>
-                                    <p className="text-gray-600 text-xs md:text-sm">8 campuses across Lahore, Gujranwala, and Islamabad</p>
-                                    <button className="mt-1 md:mt-2 text-secondary font-medium hover:underline flex items-center text-xs md:text-sm">
-                                        View all locations
-                                        <svg className="w-3 h-3 md:w-4 md:h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </button>
+                                    <h4 className="font-bold text-primary text-base md:text-lg">Premier Campus Location</h4>
+                                    <p className="text-gray-600 text-sm leading-snug">29 C 17 Circular Road, near KFC, University Town, Peshawar</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-start space-x-3 md:space-x-4 animate-fade-in animation-delay-400">
-                                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                                    <span className="text-xl md:text-2xl text-secondary">🕒</span>
+                            {/* Timings Item */}
+                            <div className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 md:w-14 md:h-14 bg-white shadow-sm rounded-xl flex items-center justify-center flex-shrink-0 border border-gold-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span className="text-2xl">🕒</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-primary mb-1 md:mb-2 text-base md:text-lg">Flexible Timings</h4>
-                                    <div className="space-y-1">
-                                        <p className="text-gray-600 text-xs md:text-sm flex items-center">
-                                            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-secondary rounded-full mr-1 md:mr-2"></span>
-                                            Mon-Fri: 8:00 AM - 4:00 PM
-                                        </p>
-                                        <p className="text-gray-600 text-xs md:text-sm flex items-center">
-                                            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-secondary rounded-full mr-1 md:mr-2"></span>
-                                            Saturday: 9:00 AM - 1:00 PM
-                                        </p>
+                                    <h4 className="font-bold text-primary text-base md:text-lg">Visiting Hours</h4>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                                        <p className="text-gray-600 text-sm">Mon-Fri: 8:00 AM - 4:00 PM</p>
+                                        <p className="text-gray-600 text-sm">Saturday: 9:00 AM - 1:00 PM</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="flex items-start space-x-3 md:space-x-4 animate-fade-in animation-delay-500">
-                                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-emerald/5 to-emerald/10 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                                    <span className="text-xl md:text-2xl text-emerald">📞</span>
+                            {/* Contact Item */}
+                            <div className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 md:w-14 md:h-14 bg-white shadow-sm rounded-xl flex items-center justify-center flex-shrink-0 border border-gold-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span className="text-2xl">📞</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-primary mb-1 md:mb-2 text-base md:text-lg">Get in Touch</h4>
-                                    <div className="space-y-1">
-                                        <p className="text-gray-600 text-xs md:text-sm flex items-center">
-                                            <span className="w-2 h-2 md:w-3 md:h-3 bg-emerald/20 rounded-full mr-1 md:mr-2 flex items-center justify-center">
-                                                <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-emerald rounded-full"></span>
-                                            </span>
-                                            +92 91 5700035
-                                        </p>
-                                        <p className="text-gray-600 text-xs md:text-sm flex items-center">
-                                            <span className="w-2 h-2 md:w-3 md:h-3 bg-emerald/20 rounded-full mr-1 md:mr-2 flex items-center justify-center">
-                                                <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-emerald rounded-full"></span>
-                                            </span>
-                                            principal@apspremier.com
-                                        </p>
-                                    </div>
+                                    <h4 className="font-bold text-primary text-base md:text-lg">Direct Contact</h4>
+                                    <p className="text-gray-600 text-sm font-semibold">091 5700035</p>
+                                    <p className="text-gray-600 text-xs md:text-sm">principal@apspremier.com</p>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="/campuspage" className="inline-block">
-                            <button className="mt-6 md:mt-8 group px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-primary to-navy-80 text-white font-subheading font-semibold rounded-lg hover:shadow-xl md:hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-sm md:text-base animate-scale-in animation-delay-700">
-                                <span>See Our Campus Highlights</span>
-                                <svg className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </button>
-                        </a>
+                        {/* CTA Button: Mobile pe Full width ho sakta hai agar aap chahen, abhi inline hai */}
+                        <div className="mt-10">
+                            <Link to="/campuspage" className="inline-block w-full sm:w-auto">
+                                <button className="w-full sm:w-auto px-8 py-4 bg-[#29234B] text-white font-bold rounded-xl hover:bg-[#D4AF37] hover:text-[#29234B] transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+                                    <span>View Campus Highlights</span>
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
-                    <div className="relative animate-slide-up animation-delay-300 mt-8 lg:mt-0">
-                        <div className="bg-white rounded-xl md:rounded-2xl shadow-lg md:shadow-xl border border-gold-10 overflow-hidden">
-                            {/* Virtual Tour Header */}
-                            <div className="bg-gradient-to-r from-primary to-navy-80 p-4 md:p-6 text-center">
-                                <h3 className="text-xl md:text-2xl font-heading font-bold text-white">
+                    {/* --- Right Column: Video Card --- */}
+                    <div className="order-1 lg:order-2 relative animate-fade-in">
+                        {/* Decorative Background Element */}
+                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+                        
+                        <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl border border-gold-10 overflow-hidden relative z-10">
+                            {/* Video Header */}
+                            <div className="bg-[#29234B] p-5 md:p-6 text-center">
+                                <h3 className="text-xl md:text-2xl font-heading font-bold text-white tracking-wide">
                                     Virtual Campus Tour
                                 </h3>
-                                <p className="text-white/90 mt-1 md:mt-2 text-sm md:text-base">Experience our campus from anywhere</p>
+                                <p className="text-white/70 text-xs md:text-sm mt-1 uppercase tracking-widest">Ali Public School Peshawar</p>
                             </div>
 
-                            {/* Tour Preview with Actual Video */}
-                            <div className="p-4 md:p-6 lg:p-8">
-                                <div className="aspect-video bg-black rounded-lg md:rounded-xl border border-gold-20 overflow-hidden mb-4 md:mb-6">
+                            {/* Video Container: Aspect ratio lock kiya hai taake mobile pe kharab na ho */}
+                            <div className="p-4 md:p-6">
+                                <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-inner border border-gray-100">
                                     <video
                                         className="w-full h-full object-cover"
                                         src={campusTour}
                                         autoPlay
                                         loop
                                         muted
-                                        controls // Yeh volume, play/pause aur full screen ka option dega
-                                        playsInline // Mobile pe theek chalne ke liye
+                                        controls
+                                        playsInline
                                     />
                                 </div>
 
-                                <div className="space-y-3 md:space-y-4">
-                                    {/* Yahan se Start Virtual Tour ka button remove kar diya gaya hai */}
+                                {/* Bottom Buttons: Mobile pe 1 column, Tablet+ pe 2 columns */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+                                    <Link to="/campuspage" className="w-full">
+                                        <button className="w-full py-3 px-4 bg-gray-50 text-primary font-bold rounded-xl border border-gray-200 hover:border-secondary hover:bg-white transition-all text-sm">
+                                            🖼️ Photo Gallery
+                                        </button>
+                                    </Link>
 
-                                    <div className="grid grid-cols-2 gap-2 md:gap-3">
-                                        {/* Photo Gallery Link */}
-                                        <Link to="/campuspage" className="w-full">
-                                            <button className="w-full py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
-                                                Photo Gallery
-                                            </button>
-                                        </Link>
-
-                                        {/* Brochure ke liye a tag hi behtar hai kyunke wo external file hoti hai */}
-                                        <a href="/brochure.pdf" download className="w-full">
-                                            <button className="w-full py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
-                                                Download Brochure
-                                            </button>
-                                        </a>
-                                    </div>
+                                    <a href="/brochure.pdf" download className="w-full">
+                                        <button className="w-full py-3 px-4 bg-gray-50 text-primary font-bold rounded-xl border border-gray-200 hover:border-secondary hover:bg-white transition-all text-sm">
+                                            📄 Download Brochure
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                        
+                        {/* Quote Box (Only visible on MD and up for better spacing) */}
+                        <div className="hidden md:block absolute -bottom-6 -left-6 bg-secondary p-4 rounded-xl shadow-xl max-w-[200px] z-20">
+                            <p className="text-[#29234B] text-xs font-bold italic leading-tight">
+                                "A modern environment for future leaders."
+                            </p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

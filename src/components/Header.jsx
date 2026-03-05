@@ -366,7 +366,7 @@ const Header = () => {
 
               <div className="text-center space-y-2">
                 <p className="text-white/60 text-xs font-bold tracking-widest uppercase">Contact Us</p>
-                <a href="tel:+9291XXXXXXX" className="block text-white text-lg font-bold hover:text-[#D4AF37]">+92 91 XXXXXXX</a>
+                <a href="tel:+9291XXXXXXX" className="block text-white text-lg font-bold hover:text-[#D4AF37]">091 5700035</a>
                 <p className="text-white/40 text-[10px] pt-4">
                   © {new Date().getFullYear()} Ali Public School & College
                 </p>

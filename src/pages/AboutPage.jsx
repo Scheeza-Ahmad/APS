@@ -11,24 +11,37 @@ import BranchTimeline from '../components/about/BranchTimeline';
 
 const AboutPage = () => {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen w-full overflow-x-hidden">
             {/* Header with cream background */}
-            <div className="bg-cream">
+            {/* 'relative z-50' ensures header stays above other sections on mobile */}
+            <div className="bg-cream relative z-50">
                 <Header />
             </div>
 
-            {/* Hero section with cream background */}
-            <HeroSection />
+            {/* Main Content wrapper */}
+            <main className="flex flex-col">
+                
+                {/* Hero section: Usually handles its own padding internally */}
+                <HeroSection />
 
-            {/* Rest of the page with white background */}
-            <div className="bg-white">
-                <HeritageSection />
-                <PremierDifference />
-                <LeadershipSection />
-                <FacultySection />
-                <BranchTimeline/>
-                <WhyChooseUs />
-            </div>
+                {/* Content Sections */}
+                <div className="bg-white">
+                    {/* Aapke components (HeritageSection, etc.) ke andar 
+                        'container mx-auto px-4 md:px-8' lazmi hona chahiye 
+                        taake sides se space barqarar rahe.
+                    */}
+                    <div className="space-y-0 md:space-y-4">
+                        <HeritageSection />
+                        <PremierDifference />
+                        <LeadershipSection />
+                        <FacultySection />
+                        <BranchTimeline />
+                        <WhyChooseUs />
+                    </div>
+                </div>
+            </main>
+
+            <Footer />
         </div>
     );
 };

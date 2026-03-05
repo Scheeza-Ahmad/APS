@@ -8,7 +8,9 @@ import Footer from '../components/Footer';
 const CampusAdmissionsPage = () => {
   return (
     <div className="font-body">
+      
       <HeroSection />
+      
       <ProcessSteps />
       <VisitUs />
       <ApplicationGuide />
