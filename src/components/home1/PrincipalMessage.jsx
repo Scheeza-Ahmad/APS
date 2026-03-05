@@ -56,7 +56,7 @@ const PrincipalMessage = () => {
                 Mr. Ali Afridi
               </h4>
               <p className="text-sm text-gray-500 uppercase tracking-wider font-subheading mt-1">
-                Founder and Principal, Ali Public School & College
+                Founder , Ali Public School & College
               </p>
             </div>
           </div>

@@ -27,8 +27,8 @@ const AcademicsPage = () => {
                 <IntroductionSection />
                 <EarlyYearsSection />
                 <JuniorSchoolSection />
-                <SeniorSchoolSection />
-                <CollegeSection />
+                {/* <SeniorSchoolSection /> */}
+                {/* <CollegeSection /> */}
                 <TeachingApproachSection />
                 <CoCurricularSection /> {/* Added */}
                 <OutcomesSection /> {/* Added */}

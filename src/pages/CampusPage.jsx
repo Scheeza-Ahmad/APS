@@ -26,14 +26,18 @@ import {
 } from 'react-icons/fa';
 import { GiTeacher, GiSecurityGate, GiBabyFace } from 'react-icons/gi';
 import { MdClass, MdMeetingRoom, MdHealthAndSafety, MdToys } from 'react-icons/md';
-import schoolOverview from "../assets/images/pages/board.png";
+import schoolOverview from "../assets/images/pages/schoolfront.png";
 import classInterior from "../assets/images/pages/interior.jpeg";
 import schoolInterior from "../assets/images/pages/schoolfront.png";
 import schoolGarden from "../assets/images/pages/greenry.png";
 import schoolartStudio from "../assets/images/pages/artstudio.jpeg";
 import earlyEducation from "../assets/images/pages/earlyeducation.jpeg";
 import schoolActivityArea from "../assets/images/pages/activity.jpeg";
-import principalOffice from "../assets/images/pages/office.jpeg";
+import principalOffice from "../assets/images/pages/principaloffice.png";
+import adminOffice from "../assets/images/pages/adminoffice.png";
+import classroom from "../assets/images/pages/classroom.jpeg";
+import schoolEducation from "../assets/images/pages/earlyeducation.jpeg";
+
 
 
 
@@ -120,19 +124,22 @@ const CampusPage = () => {
       image:schoolGarden
     },
     {
-      title: "Dedicated Drop-off Lane",
+      title: "Dedicated Learning corners",
       icon: GiSecurityGate,
-      description: "Secure drop-off and pick-up zone for parents"
+      description: "An interactive learning corners for kids",
+      image:schoolEducation
     },
     {
-      title: "CCTV & Security Systems",
+      title: "State of the art classrooms",
       icon: FaShieldAlt,
-      description: "24/7 surveillance and controlled campus access"
+      description: "Fully airy and bright classrooms",
+      image:classroom
     },
     {
       title: "Admin Office",
       icon: MdMeetingRoom,
-      description: "Reception and administrative support area"
+      description: "Reception and administrative support area",
+      image:adminOffice
     }
   ];
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import campus from "../../assets/images/pages/schoolfront.png";
 import earlyEducation from "../../assets/images/pages/earlyeducation.jpeg";
+import earlyEdu from "../../assets/images/pages/cars.jpeg";
+
 import admission from "../../assets/images/pages/admissions.png";
 
 
@@ -11,13 +13,13 @@ const ExploreGrid = () => {
   const cards = [
     { 
       title: "Early Years (Ages 3–7)", 
-      img: earlyEducation, // Young kid playing/learning
+      img: earlyEdu, // Young kid playing/learning
       link: "/academicspage",
       desc: "Phonics, nature play, and creative expression."
     },
     { 
       title: "Junior Primary (Ages 7–10)", 
-      img: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=800", // Older kids discussing
+      img: earlyEducation, // Older kids discussing
       link: "/academicspage",
       desc: "Inquiry-based science, digital literacy, and mindfulness."
     },
