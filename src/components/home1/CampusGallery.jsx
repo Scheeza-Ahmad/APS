@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
-import studioImg from "../../assets/images/pages/studio.jpeg";
+import schoolCanteen from "../../assets/images/pages/canteen.png";
 import classroom from "../../assets/images/pages/interior.jpeg";
 import greenry from "../../assets/images/pages/greenry.png";
 import learningCorner from "../../assets/images/pages/learningcorner.png";
@@ -21,7 +21,7 @@ const CampusGallery = () => {
     {
       title: "Modern Cafeteria",
       desc: "Clean, hygienic, and healthy food options",
-      img: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=800", // Canteen ki dummy image
+      img: schoolCanteen, // Canteen ki dummy image
       colSpan: "md:col-span-1",
       height: "h-48"
     },

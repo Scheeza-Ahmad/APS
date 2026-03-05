@@ -31,7 +31,7 @@ import classInterior from "../assets/images/pages/interior.jpeg";
 import schoolInterior from "../assets/images/pages/schoolfront.png";
 import schoolGarden from "../assets/images/pages/greenry.png";
 import schoolartStudio from "../assets/images/pages/artstudio.jpeg";
-import schoolCanteen from "../assets/images/pages/canteen.png";
+import earlyEducation from "../assets/images/pages/earlyeducation.jpeg";
 import schoolActivityArea from "../assets/images/pages/activity.jpeg";
 import principalOffice from "../assets/images/pages/office.jpeg";
 
@@ -190,9 +190,9 @@ const CampusPage = () => {
     },
     {
       id: 5,
-      title: "Canteen",
-      description: "A canteen with quality food",
-      image: schoolCanteen
+      title: "Early Education",
+      description: "Different features to teach the students to sharpen their brains at early age",
+      image: earlyEducation
     },
     {
       id: 6,
@@ -337,63 +337,7 @@ const CampusPage = () => {
           </div>
         </div>
 
-        {/* Safety & Security Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#29234B] mb-4 animate-text-focus">
-              Safety & Safeguarding
-            </h2>
-            <p className="text-lg text-[#29234B]/60 max-w-2xl mx-auto animate-text-slide">
-              Comprehensive security measures for complete peace of mind
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-[#29234B] to-[#3D366A] rounded-2xl p-8 text-white">
-            <div className="flex items-center mb-8">
-              <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mr-4">
-                <FaShieldAlt className="text-[#D4AF37] text-xl" />
-              </div>
-              <h3 className="font-heading text-2xl font-bold text-white">
-                Security Features
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {safetyFeatures.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/15 transition-all duration-300 animate-slide-in-left"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex items-start mb-3">
-                    <div className="w-8 h-8 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
-                    </div>
-                    <h4 className="font-bold text-white text-lg">{feature.title}</h4>
-                  </div>
-                  <p className="text-white/80 text-sm">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center">
-                  <MdHealthAndSafety className="text-[#10B981] text-2xl mr-3" />
-                  <div>
-                    <h4 className="font-bold text-white">Health & Wellness</h4>
-                    <p className="text-white/60 text-sm">Regular health checks and wellness programs</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <FaShieldAlt className="text-[#D4AF37] text-2xl mr-3" />
-                  <div>
-                    <h4 className="font-bold text-white">Parent Access Control</h4>
-                    <p className="text-white/60 text-sm">Secure pick-up and drop-off procedures</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        
         {/* Campus Gallery */}
         <div className="mb-16">
           <div className="text-center mb-12">

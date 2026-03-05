@@ -5,25 +5,25 @@ const LegacyStory = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 max-w-5xl">
-        
+
         {/* --- Chapter 1: The Beginning --- */}
         <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
           <div className="w-full md:w-1/3">
-             <div className="bg-light p-8 rounded-2xl border-l-4 border-secondary shadow-sm">
-               <FaBookReader className="text-4xl text-primary mb-4" />
-               <h3 className="font-heading text-2xl text-primary font-bold mb-2">Humble Roots</h3>
-               <p className="text-gray-600 text-sm">A commitment born from personal experience.</p>
-             </div>
+            <div className="bg-light p-8 rounded-2xl border-l-4 border-secondary shadow-sm">
+              <FaBookReader className="text-4xl text-primary mb-4" />
+              <h3 className="font-heading text-2xl text-primary font-bold mb-2">Humble Roots</h3>
+              <p className="text-gray-600 text-sm">A commitment born from personal experience.</p>
+            </div>
           </div>
           <div className="w-full md:w-2/3">
             <h2 className="font-heading text-3xl text-primary font-bold mb-6">The Dream of a Son</h2>
             <p className="font-body text-gray-600 text-lg leading-relaxed mb-6">
-              The story of Ali Public School is not just about buildings or books; it is a story of grit and determination. 
-              Our founder grew up in a household where education was a distant dream. His father, a hardworking man, 
+              The story of Ali Public School is not just about buildings or books; it is a story of grit and determination.
+              Our founder grew up in a household where education was a distant dream. His father, a hardworking man,
               could not read or write. He saw the struggles of a life without education firsthand.
             </p>
             <p className="font-body text-gray-600 text-lg leading-relaxed">
-              But he had a vision. He promised himself that he would not only educate himself but would one day 
+              But he had a vision. He promised himself that he would not only educate himself but would one day
               make quality education accessible to every child in his community, regardless of their background.
             </p>
           </div>
@@ -33,9 +33,9 @@ const LegacyStory = () => {
         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
           <div className="w-full md:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
-              <img 
-                src="https://images.unsplash.com/photo-1548685913-fe6678babe8d?q=80&w=800" 
-                alt="UK Education" 
+              <img
+                src="https://images.unsplash.com/photo-1548685913-fe6678babe8d?q=80&w=800"
+                alt="UK Education"
                 className="w-full h-auto"
               />
               <div className="absolute bottom-0 left-0 bg-secondary text-primary px-6 py-2 font-bold font-heading">
@@ -43,11 +43,12 @@ const LegacyStory = () => {
               </div>
             </div>
           </div>
+
           <div className="w-full md:w-1/2">
             <h2 className="font-heading text-3xl text-primary font-bold mb-6">Bridging Continents</h2>
             <p className="font-body text-gray-600 text-lg leading-relaxed mb-6">
-              Driven by an unyielding passion, our founder journeyed to the <strong>United Kingdom</strong>. 
-              There, he immersed himself in world-class educational systems, understanding how the best institutions 
+              Driven by an unyielding passion, our founder journeyed to the <strong>United Kingdom</strong>.
+              There, he immersed himself in world-class educational systems, understanding how the best institutions
               nurture young minds. He didn't just study for a degree; he studied for a purpose.
             </p>
             <p className="font-body text-gray-600 text-lg leading-relaxed border-l-4 border-primary pl-4 italic text-primary">
@@ -56,6 +57,32 @@ const LegacyStory = () => {
           </div>
         </div>
 
+        {/* --- New Section: Admissions & Features (Brochure Se Liya Gaya) --- */}
+        <div className="mt-24 border-t border-gray-100 pt-16">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-900 mb-4 tracking-tight">ADMISSIONS 2026</h2>
+            <div className="inline-block bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-bold text-lg animate-pulse">
+              LIMITED SEATS NOW AVAILABLE
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "Oxford Curriculum", desc: "International academic standards for global competitiveness." },
+              { title: "Qualified Faculty", desc: "Highly experienced teachers dedicated to student growth." },
+              { title: "Secure Environment", desc: "A safe and nurturing space for focused learning." },
+              { title: "Co-Curricular", desc: "Balanced development through sports and activities." }
+            ].map((item, index) => (
+              <div key={index} className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow border-b-4 border-blue-900">
+                <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* --- New Section: Campus Location & Connect --- */}
+        
       </div>
     </section>
   );

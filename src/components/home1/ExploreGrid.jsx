@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import campus from "../../assets/images/pages/schoolfront.png";
-import earlyEducation from "../../assets/images/pages/earlyeducation.png";
-import admission from "../../assets/images/pages/admission.png";
+import earlyEducation from "../../assets/images/pages/earlyeducation.jpeg";
+import admission from "../../assets/images/pages/admissions.png";
 
 
 

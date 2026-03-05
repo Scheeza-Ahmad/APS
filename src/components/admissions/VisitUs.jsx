@@ -1,6 +1,6 @@
 import React from 'react';
 import campusTour from "../../assets/videos/campustour.mp4";
-
+import { Link } from 'react-router-dom';
 const VisitUs = () => {
     return (
         <div className="py-12 md:py-16 lg:py-20 bg-cream">
@@ -103,12 +103,12 @@ const VisitUs = () => {
                             {/* Tour Preview with Actual Video */}
                             <div className="p-4 md:p-6 lg:p-8">
                                 <div className="aspect-video bg-black rounded-lg md:rounded-xl border border-gold-20 overflow-hidden mb-4 md:mb-6">
-                                    <video 
+                                    <video
                                         className="w-full h-full object-cover"
-                                        src={campusTour} 
-                                        autoPlay 
-                                        loop 
-                                        muted 
+                                        src={campusTour}
+                                        autoPlay
+                                        loop
+                                        muted
                                         controls // Yeh volume, play/pause aur full screen ka option dega
                                         playsInline // Mobile pe theek chalne ke liye
                                     />
@@ -116,14 +116,21 @@ const VisitUs = () => {
 
                                 <div className="space-y-3 md:space-y-4">
                                     {/* Yahan se Start Virtual Tour ka button remove kar diya gaya hai */}
-                                    
+
                                     <div className="grid grid-cols-2 gap-2 md:gap-3">
-                                        <button className="py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
-                                            Photo Gallery
-                                        </button>
-                                        <button className="py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
-                                            Download Brochure
-                                        </button>
+                                        {/* Photo Gallery Link */}
+                                        <Link to="/campuspage" className="w-full">
+                                            <button className="w-full py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
+                                                Photo Gallery
+                                            </button>
+                                        </Link>
+
+                                        {/* Brochure ke liye a tag hi behtar hai kyunke wo external file hoti hai */}
+                                        <a href="/brochure.pdf" download className="w-full">
+                                            <button className="w-full py-2 md:py-3 bg-white border border-gold-10 text-gray-700 rounded-lg hover:border-secondary hover:text-primary transition-all duration-300 text-xs md:text-sm font-medium">
+                                                Download Brochure
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

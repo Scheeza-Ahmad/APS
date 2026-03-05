@@ -47,16 +47,16 @@ const PrincipalMessage = () => {
             
             {/* EXACT QUOTE FROM DOCUMENT */}
             <blockquote className="font-body text-gray-600 text-lg md:text-xl italic leading-relaxed">
-              "Education is a partnership between the school, parents, and community. Our role is to inspire, guide, and nurture each child while creating an environment where learning feels joyful and meaningful."
+              "Our goal is to nurture confident learners,strong thinkers, and responsible future leaders."
             </blockquote>
             
             <div className="pt-4 border-t border-gray-200 inline-block md:block">
               {/* Name: Mr. Ali */}
               <h4 className="font-heading text-xl font-bold text-primary">
-                Mr. Ali
+                Mr. Ali Afridi
               </h4>
               <p className="text-sm text-gray-500 uppercase tracking-wider font-subheading mt-1">
-                Principal, Ali Public School & College
+                Founder and Principal, Ali Public School & College
               </p>
             </div>
           </div>
