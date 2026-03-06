@@ -47,12 +47,16 @@ const LegacyStory = () => {
           <div className="w-full md:w-1/2">
             <h2 className="font-heading text-3xl text-primary font-bold mb-6">Bridging Continents</h2>
             <p className="font-body text-gray-600 text-lg leading-relaxed mb-6">
-              Driven by an unyielding passion, our founder journeyed to the <strong>United Kingdom</strong>.
-              There, he immersed himself in world-class educational systems, understanding how the best institutions
-              nurture young minds. He didn't just study for a degree; he studied for a purpose.
+              Ali Afridi FCA is the Founder of Ali Public School – Premier Campus and a British-educated Chartered Accountant with extensive international professional experience.
+              Mr. Afridi completed his education in the United Kingdom, progressing through the IGCSE academic framework before qualifying as a Chartered Accountant. His professional formation in the UK instilled in him a deep appreciation for structured learning, disciplined institutional standards, and the role that high-quality schooling plays in shaping future leaders.
+              He began his professional career with KPMG, one of the world’s leading professional services firms. Over the course of his career he has held senior leadership positions with globally recognised organisations including Cisco Systems and Saudi Telecom Company (stc).
+              Through these roles he gained significant experience in governance, strategy, and organisational leadership across international environments in the United Kingdom and the Middle East.
+              Inspired by these experiences, Mr. Afridi established Ali Public School – Premier Campus with the goal of bringing high standards of education, discipline, and institutional integrity to young learners in Peshawar.
+              His vision is to nurture confident students who possess strong academic foundations, intellectual curiosity, and the character necessary to succeed in an increasingly competitive world.
+
             </p>
             <p className="font-body text-gray-600 text-lg leading-relaxed border-l-4 border-primary pl-4 italic text-primary">
-              "I wanted to bring the Oxford standard of learning back home, but without the exclusive price tag."
+             "“Our goal is to nurture confident learners, strong thinkers, and responsible future leaders.”"
             </p>
           </div>
         </div>
@@ -82,7 +86,7 @@ const LegacyStory = () => {
         </div>
 
         {/* --- New Section: Campus Location & Connect --- */}
-        
+
       </div>
     </section>
   );

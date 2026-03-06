@@ -154,69 +154,11 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link
-              to="/features"
-              className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-3 font-bold hover:scale-105 transition-all duration-300"
-            >
-              View All Features →
-            </Link>
-          </div>
+          
         </div>
       </section>
 
-      {/* STATS SECTION */}
-      <section className="py-12 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-3xl mx-auto">
-            {[
-              { number: "35", label: "Years of Excellence", suffix: "+" },
-              { number: "5000", label: "Successful Alumni", suffix: "+" },
-              { number: "150", label: "Qualified Faculty", suffix: "+" },
-              { number: "25", label: "Academic Programs", suffix: "+" },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="group text-center p-4 hover:bg-white/5 rounded-lg transition-all duration-500 hover:scale-105 cursor-pointer"
-              >
-                <div className="text-3xl font-bold text-secondary group-hover:scale-110 transition-transform">
-                  {stat.number}
-                  <span className="opacity-70">{stat.suffix}</span>
-                </div>
-                <p className="text-sm opacity-90">{stat.label}</p>
-                <div className="h-0.5 w-0 bg-secondary mx-auto mt-2 group-hover:w-8 transition-all duration-500"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="bg-primary text-white py-10">
-        <div className="container mx-auto text-center">
-          <h3 className="font-heading text-xl mb-2 hover:text-secondary transition-colors">
-            ALI PUBLIC SCHOOL
-          </h3>
-          <p className="text-white/80 text-sm mb-4">
-            Premier Campus, University Road, Peshawar
-          </p>
-
-          <div className="flex justify-center gap-4 mb-4 text-secondary font-semibold text-sm">
-            <span>📞 +92 123 4567890</span>
-            <span>✉ info@alipublicschool.edu.pk</span>
-          </div>
-
-          <div className="flex justify-center gap-4 mb-6">
-            <Link className="hover:text-secondary transition-all">Facebook</Link>
-            <Link className="hover:text-secondary transition-all">Instagram</Link>
-            <Link className="hover:text-secondary transition-all">YouTube</Link>
-          </div>
-
-          <div className="pt-6 border-t border-white/20 text-white/60 text-xs">
-            © {new Date().getFullYear()} Ali Public School. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      
 
       {/* ANIMATION CSS */}
       <style>{`

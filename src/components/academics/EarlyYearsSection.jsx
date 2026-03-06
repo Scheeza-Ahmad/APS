@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaChild, FaSmile, FaPaintBrush, FaQuestionCircle, FaUsers } from 'react-icons/fa';
+import { FaChild, FaBookReader, FaHashtag, FaComments, FaPalette, FaHeart } from 'react-icons/fa';
 
 const EarlyYearsSection = () => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -16,50 +16,46 @@ const EarlyYearsSection = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.1,
                 delayChildren: 0.1
             }
         }
     };
 
     const cardVariants = {
-        hidden: { opacity: 0, x: -30 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
-            x: 0,
-            transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 15
-            }
+            y: 0,
+            transition: { type: "spring", stiffness: 100, damping: 15 }
         }
     };
 
-    const features = [
+    const coreFocus = [
         {
-            icon: <FaChild className="text-xl" />,
-            text: "Early literacy & numeracy"
+            icon: <FaBookReader className="text-xl" />,
+            text: "Early literacy and phonics"
         },
         {
-            icon: <FaSmile className="text-xl" />,
-            text: "Social-emotional confidence"
+            icon: <FaHashtag className="text-xl" />,
+            text: "Basic numeracy skills"
         },
         {
-            icon: <FaPaintBrush className="text-xl" />,
-            text: "Creativity & imagination"
+            icon: <FaComments className="text-xl" />,
+            text: "Language and communication development"
         },
         {
-            icon: <FaQuestionCircle className="text-xl" />,
-            text: "Curiosity development"
+            icon: <FaPalette className="text-xl" />,
+            text: "Creative activities and structured play"
         },
         {
-            icon: <FaUsers className="text-xl" />,
-            text: "Play-based environment"
+            icon: <FaHeart className="text-xl" />,
+            text: "Social and emotional development"
         }
     ];
 
     return (
-        <section ref={ref} className="py-12 md:py-16 bg-white">
+        <section ref={ref} className="py-16 md:py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     variants={containerVariants}
@@ -67,139 +63,97 @@ const EarlyYearsSection = () => {
                     animate={controls}
                     className="max-w-6xl mx-auto"
                 >
-                    {/* Main Card - Lightened background */}
-                    <div className="bg-gradient-to-r from-amber-50/70 to-yellow-50/70 rounded-2xl overflow-hidden border border-amber-100 shadow-lg">
-                        {/* Header - Cream background */}
-                        <div className="bg-cream px-6 md:px-8 py-4 border-b border-amber-100">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3">
-                                    <motion.div
-                                        animate={{ rotate: [0, 10, -10, 0] }}
-                                        transition={{ duration: 2, repeat: Infinity }}
-                                    >
-                                        <FaChild className="text-2xl text-secondary" />
-                                    </motion.div>
-                                    <h2 className="font-heading text-2xl md:text-3xl text-primary font-bold">
-                                        EARLY YEARS (AGES 3–7)
-                                    </h2>
-                                </div>
-                                <div className="hidden md:block">
-                                    <span className="font-heading text-secondary text-lg font-bold">
-                                        Foundation Phase
-                                    </span>
-                                </div>
+                    {/* Main Card with Premium Branding */}
+                    <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-2xl">
+                        
+                        {/* Header Section */}
+                        <div className="bg-[#29234B] px-8 py-10 text-center md:text-left relative">
+                            <div className="absolute top-0 right-0 p-8 opacity-10">
+                                <FaChild className="text-9xl text-white" />
+                            </div>
+                            <div className="relative z-10">
+                                <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-xs mb-3 block">
+                                    Foundation Phase
+                                </span>
+                                <h2 className="font-heading text-3xl md:text-5xl text-white font-bold mb-4">
+                                    EARLY YEARS PROGRAMME
+                                </h2>
+                                <p className="text-gray-300 font-medium text-lg tracking-wide uppercase">
+                                    Playgroup – Kindergarten
+                                </p>
                             </div>
                         </div>
 
-                        {/* Content - Lightened background */}
-                        <div className="p-6 md:p-8 bg-gradient-to-b from-white/90 to-amber-50/30">
-                            <motion.div
-                                variants={containerVariants}
-                                className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
-                            >
-                                {/* Left: Description */}
+                        {/* Content Body */}
+                        <div className="p-8 md:p-12">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                                
+                                {/* Left: Text Content */}
                                 <motion.div variants={cardVariants}>
-                                    <h3 className="font-heading text-xl md:text-2xl text-primary font-bold mb-4">
-                                        A joyful, play-based environment
+                                    <h3 className="font-heading text-2xl text-[#29234B] font-bold mb-6">
+                                        Supporting Holistic Development
                                     </h3>
-                                    <p className="font-body text-primary/80 text-lg leading-relaxed mb-6">
-                                        We create a nurturing space where young minds explore, discover, and develop essential skills through engaging, age-appropriate activities.
+                                    <p className="font-body text-gray-600 text-lg leading-relaxed mb-8">
+                                        The early years programme is specifically designed to support the holistic development of young learners, building the foundational skills necessary for future academic success.
                                     </p>
                                     
-                                    {/* Features Grid */}
-                                    <div className="space-y-3">
-                                        {features.map((feature, index) => (
+                                    <div className="grid grid-cols-1 gap-4">
+                                        {coreFocus.map((item, index) => (
                                             <motion.div
                                                 key={index}
                                                 variants={cardVariants}
-                                                custom={index}
-                                                className="flex items-center gap-3"
+                                                className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border-l-4 border-[#D4AF37] group hover:bg-[#29234B] transition-all duration-300"
                                             >
-                                                <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20">
-                                                    <div className="text-secondary">
-                                                        {feature.icon}
-                                                    </div>
+                                                <div className="text-[#D4AF37] group-hover:text-white transition-colors">
+                                                    {item.icon}
                                                 </div>
-                                                <span className="font-body text-primary/90">
-                                                    {feature.text}
+                                                <span className="font-body font-bold text-[#29234B] group-hover:text-white transition-colors">
+                                                    {item.text}
                                                 </span>
                                             </motion.div>
                                         ))}
                                     </div>
                                 </motion.div>
 
-                                {/* Right: Visual/Age Range */}
-                                <motion.div variants={cardVariants} className="flex justify-center">
-                                    <div className="relative">
-                                        {/* Age Circle - Lightened */}
-                                        <div className="w-64 h-64 rounded-full border-2 border-secondary/30 flex items-center justify-center bg-gradient-to-br from-white to-amber-50/50 shadow-sm">
-                                            <div className="text-center">
-                                                <div className="font-heading text-5xl md:text-6xl text-primary font-bold mb-2">
-                                                    3-7
-                                                </div>
-                                                <div className="font-body text-primary/80 text-sm">
-                                                    Years Old
-                                                </div>
+                                {/* Right: Visual Impact */}
+                                <motion.div variants={cardVariants} className="relative flex justify-center">
+                                    <div className="relative w-72 h-72 md:w-80 md:h-80">
+                                        {/* Stylized Badge */}
+                                        <div className="absolute inset-0 rounded-full border-4 border-dashed border-[#D4AF37]/30 animate-spin-slow"></div>
+                                        <div className="absolute inset-4 rounded-full bg-[#29234B] shadow-2xl flex items-center justify-center p-8 text-center">
+                                            <div>
+                                                <h4 className="text-[#D4AF37] font-heading text-xl font-bold mb-2">Age Range</h4>
+                                                <p className="text-white text-4xl font-bold mb-2">3 – 7</p>
+                                                <p className="text-gray-400 text-sm uppercase tracking-widest">Foundational Years</p>
                                             </div>
                                         </div>
                                         
-                                        {/* Decorative Elements - Lightened */}
-                                        <motion.div
-                                            className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-secondary/30"
-                                            animate={{
-                                                scale: [1, 1.2, 1],
-                                                opacity: [0.5, 0.8, 0.5]
-                                            }}
-                                            transition={{
-                                                duration: 2,
-                                                repeat: Infinity
-                                            }}
-                                        />
-                                        <motion.div
-                                            className="absolute -bottom-4 -right-4 w-10 h-10 rounded-full bg-secondary/20"
-                                            animate={{
-                                                scale: [1, 1.3, 1],
-                                                opacity: [0.4, 0.7, 0.4]
-                                            }}
-                                            transition={{
-                                                duration: 2.5,
-                                                repeat: Infinity,
-                                                delay: 0.5
-                                            }}
-                                        />
+                                        {/* Floating Elements */}
+                                        <motion.div 
+                                            animate={{ y: [0, -10, 0] }}
+                                            transition={{ duration: 3, repeat: Infinity }}
+                                            className="absolute -top-4 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100"
+                                        >
+                                            <span className="text-2xl">✨</span>
+                                        </motion.div>
+                                        <motion.div 
+                                            animate={{ y: [0, 10, 0] }}
+                                            transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+                                            className="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100"
+                                        >
+                                            <span className="text-2xl">🎨</span>
+                                        </motion.div>
                                     </div>
                                 </motion.div>
-                            </motion.div>
 
-                            {/* Age Milestones - Lightened */}
-                            <motion.div
-                                variants={containerVariants}
-                                className="mt-8 pt-6 border-t border-amber-100"
+                            </div>
+
+                            {/* Tagline Footer */}
+                            <motion.div 
+                                variants={cardVariants}
+                                className="mt-16 py-6 border-t border-gray-100 text-center italic text-[#29234B] font-medium"
                             >
-                                <h4 className="font-heading text-lg text-primary font-bold mb-4 text-center">
-                                    Key Developmental Milestones
-                                </h4>
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                    {[
-                                        { age: "3-4", milestone: "Basic Communication" },
-                                        { age: "4-5", milestone: "Social Skills" },
-                                        { age: "5-6", milestone: "Early Literacy" },
-                                        { age: "6-7", milestone: "Numeracy Skills" }
-                                    ].map((item, index) => (
-                                        <motion.div
-                                            key={index}
-                                            variants={cardVariants}
-                                            className="bg-white/90 rounded-lg p-3 text-center border border-secondary/10 shadow-sm hover:shadow-md transition-shadow"
-                                        >
-                                            <div className="font-heading text-lg text-primary font-bold">
-                                                {item.age}
-                                            </div>
-                                            <div className="font-body text-primary/80 text-xs">
-                                                {item.milestone}
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
+                                "Where curious minds grow into confident learners."
                             </motion.div>
                         </div>
                     </div>

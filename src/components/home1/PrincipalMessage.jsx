@@ -53,14 +53,13 @@ const PrincipalMessage = () => {
             <div className="pt-4 border-t border-gray-200 inline-block md:block">
               {/* Name: Mr. Ali */}
               <h4 className="font-heading text-xl font-bold text-primary">
-                Mr. Ali Afridi
+                Principal
               </h4>
               <p className="text-sm text-gray-500 uppercase tracking-wider font-subheading mt-1">
                 Founder , Ali Public School & College
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </section>

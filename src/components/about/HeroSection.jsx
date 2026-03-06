@@ -67,7 +67,7 @@ const HeroSection = () => {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="font-subheading text-lg md:text-xl text-primary/80 mb-6"
                     >
-                        Shaping Future Leaders Through Excellence in Education Since 1995
+                        Shaping Future Leaders Through Excellence in Education Since 2012
                     </motion.p>
                     <motion.div
                         initial={{ width: 0 }}
