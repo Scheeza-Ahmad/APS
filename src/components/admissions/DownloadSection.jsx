@@ -1,6 +1,12 @@
 import React from 'react';
 
 const DownloadSection = () => {
+  const colorMap = {
+    primary: 'rgba(41, 35, 75, 0.1)',
+    secondary: 'rgba(212, 175, 55, 0.1)',
+    emerald: 'rgba(16, 185, 129, 0.1)'
+  };
+
   const downloads = [
     {
       title: "Admissions Prospectus",
@@ -52,7 +58,10 @@ const DownloadSection = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gold-10 h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group-hover:border-secondary">
-                <div className={`w-16 h-16 rounded-xl bg-${item.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div 
+                className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                style={{ backgroundColor: colorMap[item.color] }}
+              >
                   <span className="text-3xl">{item.icon}</span>
                 </div>
                 

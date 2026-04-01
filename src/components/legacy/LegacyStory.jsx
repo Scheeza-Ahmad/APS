@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaBookReader } from 'react-icons/fa';
+import { FaBookReader, FaUserTie, FaSchool } from 'react-icons/fa';
+
+import founderImg from "../../assets/images/pages/founder.jpeg";
 
 const LegacyStory = () => {
   return (
@@ -29,19 +31,36 @@ const LegacyStory = () => {
           </div>
         </div>
 
-        {/* --- Chapter 2: The Journey to UK --- */}
+        {/* --- Chapter 2: Bridging Continents & Founder's Vision --- */}
         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
           <div className="w-full md:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
+            {/* 📸 FOUNDER PICTURE PLACEHOLDER ✅ */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white bg-gray-100 group">
+              
+              {/* --- Asal Image Lagane Ki Jagah --- */}
               <img
-                src="https://images.unsplash.com/photo-1548685913-fe6678babe8d?q=80&w=800"
-                alt="UK Education"
-                className="w-full h-auto"
+                src={founderImg} // Asal image ke liye is line ko uncomment karein aur niche wali ko comment
+                alt="Ali Afridi FCA - Founder Ali Public School"
+                className="w-full h-auto min-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute bottom-0 left-0 bg-secondary text-primary px-6 py-2 font-bold font-heading">
-                Global Standards
+              
+              {/* Designation Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 pt-12">
+                <div className="flex items-center gap-3">
+                    <FaUserTie className="text-secondary text-2xl"/>
+                    <div>
+                        <p className="text-white font-bold font-heading text-lg">Ali Afridi FCA</p>
+                        <p className="text-secondary text-sm font-medium">Founder, Ali Public School</p>
+                    </div>
+                </div>
+              </div>
+
+              {/* Decorative Element */}
+              <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                 <FaSchool className="text-white text-xl"/>
               </div>
             </div>
+            <p className="text-center text-gray-500 text-xs mt-4 italic">Mr. Ali Afridi FCA, Chartered Accountant & Educational Visionary</p>
           </div>
 
           <div className="w-full md:w-1/2">
@@ -52,20 +71,18 @@ const LegacyStory = () => {
               He began his professional career with KPMG, one of the world’s leading professional services firms. Over the course of his career he has held senior leadership positions with globally recognised organisations including Cisco Systems and Saudi Telecom Company (stc).
               Through these roles he gained significant experience in governance, strategy, and organisational leadership across international environments in the United Kingdom and the Middle East.
               Inspired by these experiences, Mr. Afridi established Ali Public School – Premier Campus with the goal of bringing high standards of education, discipline, and institutional integrity to young learners in Peshawar.
-              His vision is to nurture confident students who possess strong academic foundations, intellectual curiosity, and the character necessary to succeed in an increasingly competitive world.
-
             </p>
             <p className="font-body text-gray-600 text-lg leading-relaxed border-l-4 border-primary pl-4 italic text-primary">
-             "“Our goal is to nurture confident learners, strong thinkers, and responsible future leaders.”"
+              “Our goal is to nurture confident learners, strong thinkers, and responsible future leaders.”
             </p>
           </div>
         </div>
 
-        {/* --- New Section: Admissions & Features (Brochure Se Liya Gaya) --- */}
+        {/* --- New Section: Admissions & Features --- */}
         <div className="mt-24 border-t border-gray-100 pt-16">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4 tracking-tight">ADMISSIONS 2026</h2>
-            <div className="inline-block bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-bold text-lg animate-pulse">
+            <h2 className="text-4xl font-bold text-primary mb-4 tracking-tight">ADMISSIONS 2026</h2>
+            <div className="inline-block bg-secondary text-primary px-6 py-2 rounded-full font-bold text-lg animate-pulse">
               LIMITED SEATS NOW AVAILABLE
             </div>
           </div>
@@ -77,15 +94,13 @@ const LegacyStory = () => {
               { title: "Secure Environment", desc: "A safe and nurturing space for focused learning." },
               { title: "Co-Curricular", desc: "Balanced development through sports and activities." }
             ].map((item, index) => (
-              <div key={index} className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow border-b-4 border-blue-900">
-                <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
+              <div key={index} className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow border-b-4 border-primary">
+                <h4 className="font-bold text-primary mb-2">{item.title}</h4>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
-
-        {/* --- New Section: Campus Location & Connect --- */}
 
       </div>
     </section>

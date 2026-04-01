@@ -202,10 +202,10 @@ const LeadershipSection = () => {
                         {/* Leadership Team Stats */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
                             {[
-                                { number: "15+", label: "Years Experience", color: "primary" },
-                                { number: "50+", label: "Faculty Members", color: "secondary" },
-                                { number: "100%", label: "Certified Teachers", color: "emerald" },
-                                { number: "24/7", label: "Parent Support", color: "purple-600" }
+                                { number: "15+", label: "Years Experience", color: "#29234B" },
+                                { number: "50+", label: "Faculty Members", color: "#D4AF37" },
+                                { number: "100%", label: "Certified Teachers", color: "#10B981" },
+                                { number: "24/7", label: "Parent Support", color: "#7C3AED" }
                             ].map((stat, index) => (
                                 <motion.div
                                     key={index}
@@ -213,7 +213,10 @@ const LeadershipSection = () => {
                                     whileHover={{ scale: 1.05 }}
                                     className="bg-white rounded-xl p-5 shadow-lg border border-gold-10 text-center"
                                 >
-                                    <div className={`text-3xl font-bold font-heading text-${stat.color} mb-2`}>
+                                    <div 
+                                      className="text-3xl font-bold font-heading mb-2"
+                                      style={{ color: stat.color }}
+                                    >
                                         {stat.number}
                                     </div>
                                     <div className="text-gray-600 font-medium text-sm">

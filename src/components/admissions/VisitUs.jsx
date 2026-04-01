@@ -1,5 +1,7 @@
 import React from 'react';
 import campusTour from "../../assets/videos/campustour.mp4";
+import brochureImg from "../../assets/images/brochure.png";
+
 import { Link } from 'react-router-dom';
 
 const VisitUs = () => {
@@ -7,6 +9,10 @@ const VisitUs = () => {
         /* Padding ko mobile par thoda kam kiya hai taake screen space bache */
         <div className="py-12 md:py-20 lg:py-24 bg-cream overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+
+
+
                 
                 {/* Grid: Mobile pe 1 column, LG pe 2 columns. Gap ko screens ke mutabiq adjust kiya hai */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -116,7 +122,7 @@ const VisitUs = () => {
                                         </button>
                                     </Link>
 
-                                    <a href="/brochure.pdf" download className="w-full">
+                                    <a href={brochureImg} download className="w-full">
                                         <button className="w-full py-3 px-4 bg-gray-50 text-primary font-bold rounded-xl border border-gray-200 hover:border-secondary hover:bg-white transition-all text-sm">
                                             📄 Download Brochure
                                         </button>

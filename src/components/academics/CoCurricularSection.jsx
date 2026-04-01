@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaFutbol, FaPalette, FaMicrophone, FaUsers, FaShieldAlt, FaSchool, FaHeart, FaBalanceScale } from 'react-icons/fa';
+import airyClassroom from "../../assets/images/pages/kgclassroom.jpeg";
 
 const CoCurricularSection = () => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -114,7 +115,7 @@ const CoCurricularSection = () => {
                                 <div className="rounded-3xl overflow-hidden border-4 border-[#D4AF37] shadow-2xl shadow-black/50">
                                     {/* Replace with actual campus safety/classroom image */}
                                     <img 
-                                        src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=800" 
+                                        src={airyClassroom} 
                                         alt="Safe School Environment" 
                                         className="w-full h-full object-cover"
                                     />

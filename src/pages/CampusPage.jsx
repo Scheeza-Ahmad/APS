@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FaSchool, 
-  FaBook, 
-  FaPaintBrush, 
-  FaTree, 
+import {
+  FaSchool,
+  FaBook,
+  FaPaintBrush,
+  FaTree,
   FaTint,
   FaLaptop,
   FaUserMd,
@@ -22,24 +22,24 @@ import {
   FaExpand,
   FaChevronLeft,
   FaChevronRight,
-  FaChild
+  FaChild,
+  FaPuzzlePiece, // Naya import
+  FaDesktop,     // Naya import
+  FaChalkboard   // Naya import
 } from 'react-icons/fa';
 import { GiTeacher, GiSecurityGate, GiBabyFace } from 'react-icons/gi';
 import { MdClass, MdMeetingRoom, MdHealthAndSafety, MdToys } from 'react-icons/md';
 import schoolOverview from "../assets/images/pages/schoolfront.png";
 import classInterior from "../assets/images/pages/interior.jpeg";
 import schoolInterior from "../assets/images/pages/schoolfront.png";
-import schoolGarden from "../assets/images/pages/greenry.png";
+import schoolGarden from "../assets/images/pages/playing.png";
 import schoolartStudio from "../assets/images/pages/artstudio.jpeg";
 import earlyEducation from "../assets/images/pages/earlyeducation.jpeg";
 import schoolActivityArea from "../assets/images/pages/activity.jpeg";
 import principalOffice from "../assets/images/pages/principaloffice.png";
 import adminOffice from "../assets/images/pages/adminoffice.png";
-import classroom from "../assets/images/pages/classroom.jpeg";
+import classroom from "../assets/images/pages/students.png";
 import schoolEducation from "../assets/images/pages/earlyeducation.jpeg";
-
-
-
 
 const CampusPage = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -90,7 +90,7 @@ const CampusPage = () => {
     },
     {
       title: "Medical & Wellness Room",
-      icon: FaUserMd,
+      icon: MdHealthAndSafety, // Changed from FaUserMd to represent the facility better
       description: "Fully equipped medical facility with trained staff",
       features: ["First aid supplies", "Resting beds", "Health monitoring", "Emergency protocols"],
       color: "from-[#29234B] to-[#3D366A]"
@@ -109,37 +109,37 @@ const CampusPage = () => {
       title: "Principal's Office",
       icon: FaUserTie,
       description: "Administrative center for school leadership",
-      image:principalOffice
+      image: principalOffice
     },
     {
-      title: "Elegant Entrance Porch",
+      title: "Elegant Entrance",
       icon: FaDoorOpen,
       description: "Welcoming entrance with secure access control",
-      image:schoolOverview
+      image: schoolOverview
     },
     {
       title: "Green-play Corner",
       icon: FaTint,
       description: "Safe water play area for sensory development",
-      image:schoolGarden
+      image: schoolGarden
     },
     {
       title: "Dedicated Learning corners",
-      icon: GiSecurityGate,
+      icon: FaPuzzlePiece, // Changed from GiSecurityGate (Perfect for interactive learning)
       description: "An interactive learning corners for kids",
-      image:schoolEducation
+      image: schoolEducation
     },
     {
       title: "State of the art classrooms",
-      icon: FaShieldAlt,
+      icon: FaChalkboard, // Changed from FaShieldAlt (Perfect for classrooms)
       description: "Fully airy and bright classrooms",
-      image:classroom
+      image: classroom
     },
     {
       title: "Admin Office",
-      icon: MdMeetingRoom,
+      icon: FaDesktop, // Changed from MdMeetingRoom (Perfect for admin/reception)
       description: "Reception and administrative support area",
-      image:adminOffice
+      image: adminOffice
     }
   ];
 
@@ -177,7 +177,7 @@ const CampusPage = () => {
       description: "Elegant entrance porch with secure access",
       image: schoolOverview
     },
-        {
+    {
       id: 2,
       title: "School Interior",
       description: "A very good learning environment",
@@ -268,7 +268,7 @@ const CampusPage = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {campusHighlights.map((highlight, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 animate-section-enter group"
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -311,30 +311,28 @@ const CampusPage = () => {
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {additionalFacilities.map((facility, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-start p-4 border border-gray-200 rounded-xl hover:border-[#D4AF37] hover:shadow-md transition-all duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <div className={`w-10 h-10 rounded-lg ${
-                    index % 3 === 0 ? 'bg-gradient-to-br from-[#29234B]/10 to-[#29234B]/5' :
+                  <div className={`w-10 h-10 rounded-lg ${index % 3 === 0 ? 'bg-gradient-to-br from-[#29234B]/10 to-[#29234B]/5' :
                     index % 3 === 1 ? 'bg-gradient-to-br from-[#D4AF37]/10 to-[#D4AF37]/5' :
-                    'bg-gradient-to-br from-[#10B981]/10 to-[#10B981]/5'
-                  } flex items-center justify-center mr-4 flex-shrink-0`}>
-                    <facility.icon className={`text-lg ${
-                      index % 3 === 0 ? 'text-[#29234B]' :
+                      'bg-gradient-to-br from-[#10B981]/10 to-[#10B981]/5'
+                    } flex items-center justify-center mr-4 flex-shrink-0`}>
+                    <facility.icon className={`text-lg ${index % 3 === 0 ? 'text-[#29234B]' :
                       index % 3 === 1 ? 'text-[#D4AF37]' :
-                      'text-[#10B981]'
-                    }`} />
+                        'text-[#10B981]'
+                      }`} />
                   </div>
                   <div className="w-full">
                     <h4 className="font-bold text-[#29234B] mb-1">{facility.title}</h4>
                     <p className="text-[#29234B]/60 text-sm">{facility.description}</p>
                     {facility.image && (
-                      <img 
-                        src={facility.image} 
-                        alt={facility.title} 
-                        className="mt-3 w-full h-32 object-cover rounded-lg shadow-sm border border-gray-100" 
+                      <img
+                        src={facility.image}
+                        alt={facility.title}
+                        className="mt-3 w-full h-32 object-cover rounded-lg shadow-sm border border-gray-100"
                       />
                     )}
                   </div>
@@ -344,7 +342,7 @@ const CampusPage = () => {
           </div>
         </div>
 
-        
+
         {/* Campus Gallery */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -357,20 +355,20 @@ const CampusPage = () => {
           </div>
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
             <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-6">
-              <img 
-                src={campusImages[activeImage].image} 
-                alt={campusImages[activeImage].title} 
+              <img
+                src={campusImages[activeImage].image}
+                alt={campusImages[activeImage].title}
                 className="w-full h-full object-cover rounded-xl"
               />
 
               {/* Navigation Buttons */}
-              <button 
+              <button
                 onClick={handlePrevImage}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
               >
                 <FaChevronLeft />
               </button>
-              <button 
+              <button
                 onClick={handleNextImage}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
               >
@@ -386,7 +384,7 @@ const CampusPage = () => {
               </div>
 
               {/* Expand Button */}
-              <button 
+              <button
                 onClick={() => setIsGalleryOpen(true)}
                 className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
               >
@@ -396,24 +394,24 @@ const CampusPage = () => {
           </div>
         </div>
 
-        {/* Campus Location Map */}
+        {/* Map Section - FIXED */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#29234B] mb-4 animate-text-focus">
-              Campus Location
-            </h2>
-            <p className="text-lg text-[#29234B]/60 max-w-2xl mx-auto animate-text-slide">
-              Find us easily in University Town, Peshawar
-            </p>
+            <h2 className="text-3xl font-bold text-[#29234B]">Our Location</h2>
+            <p className="text-gray-500">Find us in University Town, Peshawar</p>
           </div>
-          <div className="md:w-2/3 p-8 mx-auto">
+          <div className="md:w-2/3 mx-auto p-4 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+            {/* NOTE: Maine embed link use ki hai. 
+                Agar aapka specific coordinates hain to "q=APS+Premier+School+Peshawar" ko replace kar sakte hain.
+            */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105663.07842777124!2d71.45873760447192!3d33.95758253683669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917b90f0e79cf%3A0xa816b2637f8ce148!2sPeshawar%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1716301323363!5m2!1sen!2s" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.3564!2d71.482!3d33.999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d910d6!2sUniversity+Town+Peshawar!5e0!3m2!1sen!2spk!4v1710000000000"
               width="100%"
-              height="350"
-              style={{ border: 0 }}
+              height="400"
+              style={{ border: 0, borderRadius: '15px' }}
               allowFullScreen=""
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title="Campus Location"
             ></iframe>
           </div>

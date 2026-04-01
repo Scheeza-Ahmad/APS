@@ -85,14 +85,14 @@ const CharacterIntro = () => {
                   </div>
                 </div>
               </div>
-              
+{/*               
               <Link 
                 to="/charactervalues"
                 className="inline-flex items-center bg-gradient-to-r from-[#29234B] to-[#3D366A] text-white px-6 py-3 rounded-lg font-bold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group shadow-lg"
               >
                 Explore Character Programme
                 <FaArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

@@ -1,6 +1,12 @@
 import React from 'react';
 
 const ApplicationGuide = () => {
+  const colorMap = {
+    primary: 'rgba(41, 35, 75, 0.1)',
+    secondary: 'rgba(212, 175, 55, 0.1)',
+    emerald: 'rgba(16, 185, 129, 0.1)'
+  };
+
   const applicationPoints = [
     {
       title: "Simple Steps",
@@ -8,6 +14,9 @@ const ApplicationGuide = () => {
       icon: "✅",
       color: "emerald"
     },
+
+
+
     {
       title: "Rolling Admissions",
       description: "Applications accepted year-round based on seat availability",
@@ -83,7 +92,10 @@ const ApplicationGuide = () => {
                     className="flex items-start p-3 md:p-4 bg-cream rounded-lg md:rounded-xl border border-gold-10 hover:border-secondary transition-all duration-300 hover:shadow-md animate-fade-in"
                     style={{ animationDelay: `${index * 200}ms` }}
                   >
-                    <div className={`w-10 h-10 md:w-12 md:h-12 bg-${point.color}/10 rounded-lg flex items-center justify-center flex-shrink-0 mr-3 md:mr-4`}>
+                    <div 
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center flex-shrink-0 mr-3 md:mr-4"
+                      style={{ backgroundColor: colorMap[point.color] }}
+                    >
                       <span className="text-lg md:text-xl">{point.icon}</span>
                     </div>
                     <div>

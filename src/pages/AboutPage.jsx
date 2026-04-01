@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
 import HeroSection from '../components/about/HeroSection';
 import HeritageSection from '../components/about/HeritageSection';
 import PremierDifference from '../components/about/PremierDifference';
 import LeadershipSection from '../components/about/LeadershipSection';
 import FacultySection from '../components/about/FacultySection';
-import Footer from '../components/Footer';
 import WhyChooseUs from '../components/about/WhyChooseUs';
 import BranchTimeline from '../components/about/BranchTimeline';
 
@@ -33,15 +31,15 @@ const AboutPage = () => {
                     <div className="space-y-0 md:space-y-4">
                         <HeritageSection />
                         <PremierDifference />
-                        <LeadershipSection />
+                        {/* <LeadershipSection /> */}
                         <FacultySection />
-                        <BranchTimeline />
+                        {/* <BranchTimeline /> */}
                         <WhyChooseUs />
                     </div>
                 </div>
             </main>
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

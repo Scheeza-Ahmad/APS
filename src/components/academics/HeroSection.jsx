@@ -53,8 +53,8 @@ const HeroSection = () => {
 
             <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center mb-8 animate-slide-in-left">
-            
-          </div>
+
+                </div>
                 <motion.div
                     variants={heroVariants}
                     initial="hidden"
@@ -90,7 +90,7 @@ const HeroSection = () => {
                     >
                         ACADEMICS <span className="text-secondary">PROGRAM</span>
                     </motion.h1>
-                    
+
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -99,7 +99,7 @@ const HeroSection = () => {
                     >
                         Shaping Minds, Building Futures Through Excellence
                     </motion.p>
-                    
+
                     <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: "120px" }}

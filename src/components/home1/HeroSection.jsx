@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import earlyedu from "../../assets/images/pages/earlyedu.jpeg";
+import earlyedu from "../../assets/images/pages/earlyedu.png";
 import schoolFront from "../../assets/images/pages/schoolfront.png";
-import interior from "../../assets/images/pages/interior.jpeg";
-import greenry from "../../assets/images/pages/greenry.png";
+import interior from "../../assets/images/pages/students.png";
+import greenry from "../../assets/images/pages/playing.png";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

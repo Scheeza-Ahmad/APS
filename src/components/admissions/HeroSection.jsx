@@ -12,6 +12,9 @@ const HeroSection = () => {
         <div className="text-center animate-fade-in">
           <div className="inline-flex items-center justify-center mb-6 md:mb-8 animate-slide-down">
             <div className="w-8 h-1 md:w-16 md:h-1 bg-gradient-to-r from-primary to-secondary mr-2 md:mr-4"></div>
+
+
+            
             <div className="flex items-center mb-8 animate-slide-in-left">
 
             </div>
@@ -37,7 +40,7 @@ const HeroSection = () => {
           {/* Responsive Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12 lg:mt-16 max-w-3xl mx-auto animate-slide-up animation-delay-700">
             <div className="text-center p-3 md:p-4 bg-white rounded-xl border border-gold-10 shadow-sm">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">3</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">2</div>
               <div className="text-xs md:text-sm text-gray-600">Campuses</div>
             </div>
             <div className="text-center p-3 md:p-4 bg-white rounded-xl border border-gold-10 shadow-sm">
