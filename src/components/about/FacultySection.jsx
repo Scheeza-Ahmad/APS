@@ -5,16 +5,16 @@ import { FaGraduationCap, FaStar, FaAward, FaBook, FaChevronLeft, FaChevronRight
 const FacultyCard = ({ faculty, index }) => {
     const facultyCardVariants = {
         hidden: { opacity: 0, x: -30 },
-        visible: {
+        visible: (custom) => ({
             opacity: 1,
             x: 0,
             transition: {
                 type: "spring",
                 stiffness: 100,
                 damping: 15,
-                delay: index * 0.15
+                delay: custom * 0.15
             }
-        },
+        }),
         hover: {
             y: -5,
             scale: 1.02,

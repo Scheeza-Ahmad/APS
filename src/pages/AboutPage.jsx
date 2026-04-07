@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import HeroSection from '../components/about/HeroSection';
 import HeritageSection from '../components/about/HeritageSection';
 import PremierDifference from '../components/about/PremierDifference';
