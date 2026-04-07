@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import HeroSection from '../components/academics/HeroSection';
 import IntroductionSection from '../components/academics/IntroductionSection';
 import EarlyYearsSection from '../components/academics/EarlyYearsSection';
