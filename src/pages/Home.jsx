@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import schoolFront from "../assets/images/pages/schoolfront.png";
+import ProspectusFlipbook from "../components/home/ProspectusFlipbook";
 
-
-// import Home1 from "./home1"
 const Home = () => {
   useEffect(() => {
     // Simple scroll animation using Intersection Observer
@@ -157,6 +156,8 @@ const Home = () => {
           
         </div>
       </section>
+
+      <ProspectusFlipbook />
 
       
 

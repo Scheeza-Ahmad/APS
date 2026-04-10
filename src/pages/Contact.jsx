@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 
 const Contact = () => {
+  const subjectOptions = ["Complaint", "General Information", "Registration"];
+
+  const messageDraftBySubject = {
+    Complaint:
+      "Please describe your complaint clearly, including student name, class, date and any relevant details.",
+    "General Information":
+      "Please share what information you would like to receive and we will reply shortly.",
+    Registration:
+      "Please tell us the student name, class applying for and preferred contact number for registration support."
+  };
+
   // State to track field values and errors
   const [formData, setFormData] = useState({
     name: "",
@@ -15,10 +26,24 @@ const Contact = () => {
   // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => {
+      const updated = { ...prev, [name]: value };
+
+      // If subject changes and message is still empty, prefill a helpful draft.
+      if (name === "subject" && !prev.message.trim() && messageDraftBySubject[value]) {
+        updated.message = messageDraftBySubject[value];
+      }
+
+      return updated;
+    });
+
     // Clear error for this field when user types
     if (errors[name]) {
-      setErrors({ ...errors, [name]: "" });
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+
+    if (name === "subject" && errors.message) {
+      setErrors((prev) => ({ ...prev, message: "" }));
     }
   };
 
@@ -46,38 +71,47 @@ const Contact = () => {
       return; // Stop submission
     }
 
-    // Prepare form data for API
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("subject", formData.subject);
-    formDataToSend.append("message", formData.message);
-    formDataToSend.append("access_key", "e2e81402-38a4-480d-8624-953f9caa492e");
+    try {
+      // Prepare form data for API
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("subject", formData.subject);
+      formDataToSend.append("message", formData.message);
+      formDataToSend.append("access_key", "e2e81402-38a4-480d-8624-953f9caa492e");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formDataToSend
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: 'Your message has been sent successfully.',
-        timer: 3000,
-        showConfirmButton: false,
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
       });
-      // Reset form
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setErrors({});
-    } else {
+
+      const data = await response.json();
+
+      if (data.success) {
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Your message has been sent successfully.",
+          timer: 3000,
+          showConfirmButton: false
+        });
+        // Reset form
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setErrors({});
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: data.message || "Something went wrong. Please try again later."
+        });
+      }
+    } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'Error!',
-        text: 'Something went wrong. Please try again later.',
+        icon: "error",
+        title: "Error",
+        text: "A network error occurred. Please try again."
       });
+      console.error("Contact form submission error:", error);
     }
   };
 
@@ -150,8 +184,7 @@ const Contact = () => {
                 <label htmlFor="subject" className="block text-sm font-body font-medium text-gray-700 mb-1 transition-colors group-hover:text-secondary">
                   Subject
                 </label>
-                <input
-                  type="text"
+                <select
                   id="subject"
                   name="subject"
                   value={formData.subject}
@@ -159,8 +192,14 @@ const Contact = () => {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent transition duration-300 bg-gray-50 focus:bg-white text-gray-900 font-body ${
                     errors.subject ? 'border-red-500' : 'border-gray-300'
                   }`}
-                  placeholder="How can we help?"
-                />
+                >
+                  <option value="">Select subject</option>
+                  {subjectOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
                 {errors.subject && (
                   <p className="text-red-500 text-sm mt-1 font-body">{errors.subject}</p>
                 )}
@@ -180,7 +219,11 @@ const Contact = () => {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent transition duration-300 bg-gray-50 focus:bg-white text-gray-900 font-body ${
                     errors.message ? 'border-red-500' : 'border-gray-300'
                   }`}
-                  placeholder="Your message..."
+                  placeholder={
+                    formData.subject
+                      ? messageDraftBySubject[formData.subject]
+                      : "Write your message"
+                  }
                 ></textarea>
                 {errors.message && (
                   <p className="text-red-500 text-sm mt-1 font-body">{errors.message}</p>
