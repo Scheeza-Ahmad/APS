@@ -67,7 +67,7 @@ const VisitUs = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-primary text-base md:text-lg">Direct Contact</h4>
-                                    <p className="text-gray-600 text-sm font-semibold">091 5700035</p>
+                                    <p className="text-gray-600 text-sm font-semibold">+92 334 0813562</p>
                                     <p className="text-gray-600 text-xs md:text-sm">principal@apspremier.com</p>
                                 </div>
                             </div>

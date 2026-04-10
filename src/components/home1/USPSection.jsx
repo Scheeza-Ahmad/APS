@@ -76,28 +76,28 @@ const USPSection = () => {
     {
       icon: <FaBuilding />,
       title: "Purpose-Built Campus",
-      desc: "A boutique environment designed specifically for early years learning.",
+      desc: "A boutique environment designed specifically for early years learning",
       color: "from-purple-500 to-indigo-500",
       heightClass: "min-h-[300px]"
     },
     {
       icon: <FaShapes />,
       title: "British-Style Design",
-      desc: "Modern, calm, and distraction-free spaces inspired by UK standards.",
+      desc: "Modern, calm, and distraction-free spaces inspired by UK standards",
       color: "from-secondary to-yellow-400", // Gold theme
       heightClass: "min-h-[300px]"
     },
     {
       icon: <FaBrain />,
-      title: "AI-Enabled Learning",
-      desc: "Smart tools and interactive boards for a future-ready education.",
+      title: "Digital PlayArea",
+      desc: "Our Digital Playground works just like a joyful space where children explore, experiment and grow",
       color: "from-cyan-500 to-blue-500",
       heightClass: "min-h-[300px]"
     },
     {
       icon: <FaLeaf />,
-      title: "Outdoor Learning Garden",
-      desc: "Eco-grass, sensory paths, and shaded decks for nature play.",
+      title: "Oxford Curriculum",
+      desc: "A world-class, structured approach to education that fosters critical thinking, academic excellence and global perspectives",
       color: "from-emerald-500 to-green-400",
       heightClass: "min-h-[300px]"
     },

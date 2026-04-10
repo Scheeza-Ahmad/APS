@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp, FaFileDownload, FaArrowRight } from 'react-icons/fa';
+import prospectus from '../../assets/prospectus.pdf';
 
 const CTASection = () => {
   return (
@@ -20,8 +21,7 @@ const CTASection = () => {
             
             {/* Heading: Deep Purple */}
             <h2 className="font-heading text-4xl md:text-5xl text-primary font-bold mb-4 leading-tight">
-              LIMITED SEATS FOR <br/>
-              <span className="text-secondary">ADMISSIONS 2026</span>
+              LIMITED SEATS
             </h2>
             
             <p className="font-body text-gray-600 text-base md:text-lg leading-relaxed mb-8 lg:mb-0">
@@ -34,7 +34,7 @@ const CTASection = () => {
             
             {/* WhatsApp Button (Gold Background) */}
             <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923340813562" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center justify-center gap-3 bg-secondary text-primary font-subheading font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-yellow-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
@@ -45,7 +45,7 @@ const CTASection = () => {
 
             {/* Prospectus Button (Purple Border, White Bg) */}
             <a 
-              href="/prospectus.pdf" 
+              href={prospectus} 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center justify-center gap-3 bg-white border-2 border-primary text-primary font-subheading font-bold py-4 px-8 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 group shadow-sm"

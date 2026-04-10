@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import LegacyHero from '../components/legacy/LegacyHero';
 import LegacyStory from '../components/legacy/LegacyStory';
 import LegacyVision from '../components/legacy/LegacyVision';
+import PrincipalMessage from '../components/home1/PrincipalMessage';
+import WhoWeAre from '../components/home1/WhoWeAre';
 
 const LegacyPage = () => {
   
@@ -13,16 +15,16 @@ const LegacyPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      
       {/* 1. Hero Banner */}
       <LegacyHero />
-
       {/* 2. Story Section (Father & UK) */}
       <LegacyStory />
-
-      {/* 3. Vision & Cards */}
+      {/* 3. Principal Message */}
+      <PrincipalMessage />
+      {/* 4. Who We Are */}
+      <WhoWeAre />
+      {/* 5. Vision & Cards */}
       <LegacyVision />
-
     </div>
   );
 };

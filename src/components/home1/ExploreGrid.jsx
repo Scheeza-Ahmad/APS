@@ -4,7 +4,7 @@ import campus from "../../assets/images/pages/schoolfront.png";
 import earlyEducation from "../../assets/images/pages/earlyeducation.jpeg";
 import earlyEdu from "../../assets/images/pages/cars.jpeg";
 
-import admission from "../../assets/images/pages/admissions.png";
+import admission from "../../assets/images/pages/extra_curricular.png";
 
 
 
@@ -15,25 +15,25 @@ const ExploreGrid = () => {
       title: "Early Years (Ages 3–7)", 
       img: earlyEdu, // Young kid playing/learning
       link: "/academicspage",
-      desc: "Phonics, nature play, and creative expression."
+      desc: "Phonics, nature play, and creative expression"
     },
     { 
       title: "Junior Primary (Ages 7–10)", 
       img: earlyEducation, // Older kids discussing
       link: "/academicspage",
-      desc: "Inquiry-based science, digital literacy, and mindfulness."
+      desc: "Inquiry-based science, digital literacy, and mindfulness"
+    },
+    { 
+      title: "Co-curricular Activities", 
+      img: admission, // Welcoming/Handshake
+      link: "/campusadmissionspage",
+      desc: "Sports, arts and clubs where children discover talents and develop confidence"
     },
     { 
       title: "Campus & Facilities", 
       img: campus, // Modern library/space
       link: "/campuspage",
-      desc: "AI corners, reading lofts, and outdoor learning gardens."
-    },
-    { 
-      title: "Admissions 2026", 
-      img: admission, // Welcoming/Handshake
-      link: "/campusadmissionspage",
-      desc: "Join a community grounded in kindness and confidence."
+      desc: "AI corners, reading lofts, and outdoor learning gardens"
     },
   ];
 

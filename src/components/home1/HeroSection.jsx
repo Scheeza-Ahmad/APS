@@ -15,28 +15,28 @@ const HeroSection = () => {
       image: schoolFront,
       title: "WELCOME TO",
       highlight: "APS PREMIER",
-      subtitle: "A Modern Primary School for a New Generation with British-inspired design."
+      subtitle: "A modern primary school for a new generation with British-inspired design"
     },
     {
       id: 2,
       image: earlyedu,
       title: "NURTURING",
       highlight: "FUTURE LEADERS",
-      subtitle: "Empowering young minds with curiosity, confidence, and compassion."
+      subtitle: "Empowering young minds with curiosity, confidence and compassion"
     },
     {
       id: 3,
       image: interior,
       title: "PURPOSE-BUILT",
       highlight: "LEARNING",
-      subtitle: "Crafted to give every child the best start in life with smart tools."
+      subtitle: "Crafted to give every child the best start in life with smart tools"
     },
     {
       id: 4,
       image: greenry,
       title: "ROOTED IN",
       highlight: "EXCELLENCE",
-      subtitle: "Building on 13 years of educational heritage and strong values."
+      subtitle: "Building on 15 years of educational heritage and strong values"
     }
   ];
 
@@ -82,7 +82,7 @@ const HeroSection = () => {
             
             {/* Tagline */}
             <p className="font-subheading text-secondary tracking-[0.25em] uppercase font-bold text-xs sm:text-sm md:text-base mb-2 animate-fade-up">
-              ALI PUBLIC SCHOOL • PREMIER CAMPUS
+              {/* ALI PUBLIC SCHOOL • PREMIER CAMPUS */}
             </p>
             <div className="h-1 w-16 bg-secondary mb-6 rounded-full"></div>
 
@@ -99,12 +99,6 @@ const HeroSection = () => {
               {slides[currentSlide].subtitle}
             </p>
 
-            {/* CTA BUTTON */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-500">
-                <Link to="/admissions" className="bg-secondary text-primary font-subheading font-bold py-3 px-10 rounded shadow-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 text-center">
-                    Admissions 2026
-                </Link>
-            </div>
 
           </div>
         </div>

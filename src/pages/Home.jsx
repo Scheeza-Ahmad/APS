@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 import schoolFront from "../assets/images/pages/schoolfront.png";
 
 
-import Home1 from "./home1"
+// import Home1 from "./home1"
 const Home = () => {
   useEffect(() => {
     // Simple scroll animation using Intersection Observer

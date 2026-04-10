@@ -2,7 +2,7 @@ import React from 'react';
 
 const LegacyHero = () => {
   return (
-    <div className="relative bg-cream pt-20 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+    <div className="relative bg-cream pt-32 md:pt-40 pb-12 md:pb-16 overflow-hidden">
       {/* Top decorative element */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-emerald"></div>
 
@@ -41,7 +41,7 @@ const LegacyHero = () => {
           {/* Stats or Highlights */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto animate-fade-in-up delay-400">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary">13+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">15+</div>
               <div className="text-xs md:text-sm text-gray-600">Years of Excellence</div>
             </div>
             <div className="text-center">

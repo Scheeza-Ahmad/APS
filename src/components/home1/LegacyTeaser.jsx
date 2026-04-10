@@ -54,7 +54,7 @@ const LegacyTeaser = () => {
               
               {/* Floating Badge */}
               <div className="absolute -bottom-4 -left-4 bg-secondary text-primary px-4 py-2 rounded-lg font-bold shadow-xl text-sm">
-                13+ Years of Success
+                15+ Years of Success
               </div>
             </div>
           </div>

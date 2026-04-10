@@ -16,13 +16,13 @@ const MissionSection = () => {
     },
     { 
       icon: <FaBalanceScale />, 
-      title: "Strong Moral Values",
+      title: "Values and Traditions",
       desc: "Character & ethics focus"
     },
     { 
       icon: <FaShieldAlt />, 
       title: "Disciplined Environment",
-      desc: "Secure & focused campus"
+      desc: "Safe and secure environment"
     },
   ];
 

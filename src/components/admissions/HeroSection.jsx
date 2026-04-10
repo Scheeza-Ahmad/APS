@@ -33,14 +33,14 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 font-body max-w-3xl mx-auto mb-6 md:mb-10 leading-relaxed px-4 animate-slide-up animation-delay-300">
-            We are excited to welcome families seeking a nurturing and modern environment for your child's education.
+            We are excited to welcome families seeking a nurturing and modern environment for their child's education and development.
           </p>
 
 
           {/* Responsive Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12 lg:mt-16 max-w-3xl mx-auto animate-slide-up animation-delay-700">
             <div className="text-center p-3 md:p-4 bg-white rounded-xl border border-gold-10 shadow-sm">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">2</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">4</div>
               <div className="text-xs md:text-sm text-gray-600">Campuses</div>
             </div>
             <div className="text-center p-3 md:p-4 bg-white rounded-xl border border-gold-10 shadow-sm">

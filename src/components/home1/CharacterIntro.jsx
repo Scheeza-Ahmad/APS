@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FaHeart, 
-  FaUsers, 
-  FaShieldAlt, 
-  FaStar, 
+import {
+  FaHeart,
+  FaUsers,
+  FaShieldAlt,
+  FaStar,
   FaTrophy,
   FaArrowRight
 } from 'react-icons/fa';
@@ -44,10 +44,10 @@ const CharacterIntro = () => {
                 Holistic Development
               </h3>
               <p className="text-[#29234B]/80 mb-6 leading-relaxed">
-                At APS, we educate the whole child — mind, heart, and character. 
+                At APS, we educate the whole child — mind, heart, and character.
                 Academic excellence is strengthened by leadership, responsibility, and compassion.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="w-8 h-8 rounded-lg bg-[#29234B]/10 flex items-center justify-center mr-4 flex-shrink-0">
@@ -60,7 +60,7 @@ const CharacterIntro = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-8 h-8 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center mr-4 flex-shrink-0">
                     <FaTrophy className="text-[#D4AF37]" />
@@ -72,7 +72,7 @@ const CharacterIntro = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-8 h-8 rounded-lg bg-[#10B981]/10 flex items-center justify-center mr-4 flex-shrink-0">
                     <FaHeart className="text-[#10B981]" />
@@ -85,7 +85,7 @@ const CharacterIntro = () => {
                   </div>
                 </div>
               </div>
-{/*               
+              {/*               
               <Link 
                 to="/charactervalues"
                 className="inline-flex items-center bg-gradient-to-r from-[#29234B] to-[#3D366A] text-white px-6 py-3 rounded-lg font-bold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group shadow-lg"
@@ -105,19 +105,18 @@ const CharacterIntro = () => {
               <p className="text-[#29234B]/80 mb-6">
                 Six pillars that form the foundation of our character education programme
               </p>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {coreValues.map((value, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#D4AF37]/40 hover:shadow-md transition-all duration-300 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${
-                      value.color === 'text-[#29234B]' ? 'from-[#29234B]/10 to-[#29234B]/5' :
-                      value.color === 'text-[#D4AF37]' ? 'from-[#D4AF37]/10 to-[#D4AF37]/5' :
-                      'from-[#10B981]/10 to-[#10B981]/5'
-                    } flex items-center justify-center mb-3 mx-auto`}>
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${value.color === 'text-[#29234B]' ? 'from-[#29234B]/10 to-[#29234B]/5' :
+                        value.color === 'text-[#D4AF37]' ? 'from-[#D4AF37]/10 to-[#D4AF37]/5' :
+                          'from-[#10B981]/10 to-[#10B981]/5'
+                      } flex items-center justify-center mb-3 mx-auto`}>
                       <value.icon className={`text-lg ${value.color}`} />
                     </div>
                     <h4 className={`font-bold text-center ${value.color}`}>
@@ -126,23 +125,7 @@ const CharacterIntro = () => {
                   </div>
                 ))}
               </div>
-              
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 bg-[#FAFAFA] text-[#29234B] text-sm rounded-full border border-gray-200">
-                    Sports & Athletics
-                  </span>
-                  <span className="px-3 py-1 bg-[#FAFAFA] text-[#29234B] text-sm rounded-full border border-gray-200">
-                    Cultural Arts
-                  </span>
-                  <span className="px-3 py-1 bg-[#FAFAFA] text-[#29234B] text-sm rounded-full border border-gray-200">
-                    Academic Competitions
-                  </span>
-                  <span className="px-3 py-1 bg-[#FAFAFA] text-[#29234B] text-sm rounded-full border border-gray-200">
-                    Quran Recitation
-                  </span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -171,7 +154,7 @@ const CharacterIntro = () => {
               color: "from-[#29234B] to-[#3D366A]"
             }
           ].map((activity, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up group"
               style={{ animationDelay: `${index * 100}ms` }}

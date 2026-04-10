@@ -23,9 +23,9 @@ const NAV_LINKS = [
   },
   { 
     id: 3, 
-    path: "/campuspage", 
-    label: "Campus", 
-    icon: "🏫" 
+    path: "/legacypage", 
+    label: "Legacy", 
+    icon: "🏛️" 
   },
   { 
     id: 4, 
@@ -189,7 +189,7 @@ const Header = () => {
                 />
               </div>
 
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center gap-0">
                 <h1 className={`
                   font-heading font-bold tracking-wide leading-none whitespace-nowrap
                   transition-colors duration-300
@@ -202,24 +202,29 @@ const Header = () => {
                   ALI PUBLIC SCHOOL
                 </h1>
 
-                <div className="flex items-center gap-2 mt-1.5">
-                  <span className={`
-                    h-0.5 rounded-full transition-all duration-500
-                    ${isScrolled ? "w-4 bg-[#D4AF37]" : "w-8 bg-[#D4AF37]"}
-                  `}></span>
-                  
-                  <span className={`
-                    font-subheading font-bold uppercase tracking-[0.2em]
-                    transition-colors duration-300
-                    ${isScrolled 
-                      ? "text-[#D4AF37] text-[10px] md:text-xs" 
-                      : "text-gray-200 text-[10px] md:text-xs drop-shadow-sm"
-                    }
-                    ${isMenuOpen ? "!text-white/70" : ""}
-                  `}>
-                    Premier Campus
-                  </span>
-                </div>
+                <span className={`
+                  font-subheading font-bold uppercase tracking-[0.2em]
+                  transition-colors duration-300
+                  ${isScrolled 
+                    ? "text-[#D4AF37] text-[10px] md:text-xs" 
+                    : "text-gray-200 text-[10px] md:text-xs drop-shadow-sm"
+                  }
+                  ${isMenuOpen ? "!text-white/70" : ""}
+                `}>
+                  Premier
+                </span>
+
+                <span className={`
+                  font-subheading italic font-medium tracking-wide
+                  transition-colors duration-300 text-[8px] md:text-[9px] leading-tight
+                  ${isScrolled 
+                    ? "text-gray-700" 
+                    : "text-white drop-shadow-md"
+                  }
+                  ${isMenuOpen ? "!text-white/60" : ""}
+                `}>
+                  Circular Road, University Town, Peshawar
+                </span>
               </div>
             </Link>
 

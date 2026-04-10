@@ -32,9 +32,9 @@ const StatsSection = () => {
         }, Math.max(stepTime, 50)); // Ensure it's not too fast for small numbers
       };
 
-      animateCount(13, setCount1);
-      animateCount(5, setCount2);
-      animateCount(8, setCount3);
+      animateCount(15, setCount1);
+      animateCount(6, setCount2);
+      animateCount(4, setCount3);
     }
   }, [inView, controls]);
 
@@ -93,9 +93,6 @@ const StatsSection = () => {
               {/* Divider */}
               <div className="h-0.5 w-12 bg-primary/10 mx-auto mb-3"></div>
               
-              <p className="text-sm text-gray-600 font-body max-w-xs mx-auto">
-                Trusted reputation since 2012.
-              </p>
             </motion.div>
 
             {/* --- STAT 2 --- */}
@@ -110,9 +107,7 @@ const StatsSection = () => {
                 Core Values
               </h3>
               <div className="h-0.5 w-12 bg-primary/10 mx-auto mb-3"></div>
-              <p className="text-sm text-gray-600 font-body max-w-xs mx-auto">
-                Curiosity, Kindness, Confidence.
-              </p>
+              
             </motion.div>
 
             {/* --- STAT 3 --- */}
@@ -124,12 +119,8 @@ const StatsSection = () => {
                 {count3}
               </div>
               <h3 className="text-lg font-bold uppercase tracking-widest text-primary mb-3">
-                Learning Spaces
+                Campuses
               </h3>
-              <div className="h-0.5 w-12 bg-primary/10 mx-auto mb-3"></div>
-              <p className="text-sm text-gray-600 font-body max-w-xs mx-auto">
-                Purpose-built AI corners & gardens.
-              </p>
             </motion.div>
 
           </div>

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { FaClipboardList, FaGraduationCap, FaFileInvoice, FaCalendarCheck } from 'react-icons/fa';
 
 const steps = [
-    { icon: <FaClipboardList />, title: "Registration", desc: "Complete the online inquiry form." },
-    { icon: <FaGraduationCap />, title: "Assessment", desc: "Scheduled entry test and interview." },
-    { icon: <FaFileInvoice />, title: "Documentation", desc: "Submission of previous records." },
-    { icon: <FaCalendarCheck />, title: "Confirmation", desc: "Final approval and fee issuance." }
+    { icon: <FaClipboardList />, title: "Registration", desc: "Complete the online inquiry form" },
+    { icon: <FaGraduationCap />, title: "Assessment", desc: "Scheduled entry test and interview" },
+    { icon: <FaFileInvoice />, title: "Documentation", desc: "Submission of previous records" },
+    { icon: <FaCalendarCheck />, title: "Confirmation", desc: "Final approval and fee issuance" }
 ];
 
 const AdmissionSteps = () => (

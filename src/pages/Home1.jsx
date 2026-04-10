@@ -35,15 +35,15 @@ const Home1 = () => {
         <div className="w-full bg-light">
           <USPSection />
           <ExploreGrid />
-          <MissionSection />
           <CampusGallery />
+          <MissionSection />
           <AcademicsSection />
           <CTASection />
           {/* <NewsGrid /> */}
           <PrincipalMessage />
           <LegacyTeaser/>
           <CharacterIntro/>
-          <Testimonials />
+          {/* <Testimonials /> */}
           <WhoWeAre />
           <StatsSection />
         </div>

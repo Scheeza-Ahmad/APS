@@ -8,25 +8,25 @@ const AcademicsSection = () => {
     {
       title: "Early Years",
       age: "Pre-Nursery & Nursery",
-      desc: "Focus on sensory play, social skills, and basic motor development.",
+      desc: "Focus on sensory play and social skills",
       icon: <FaChild />
     },
     {
       title: "Foundation",
       age: "KG & Prep",
-      desc: "Introducing phonics, basic numeracy, and creative expression.",
+      desc: "Introducing phonics, basic numeracy, and creative expression",
       icon: <FaShapes />
     },
     {
       title: "Lower Primary",
       age: "Class 1 - 3",
-      desc: "Building strong foundations in English, Math, and Urdu through Oxford curriculum.",
+      desc: "Building strong foundations in Mathematics,Languages(English & Urdu) and Sciences(Natural & Social)",
       icon: <FaPalette />
     },
     {
       title: "Upper Primary",
       age: "Class 4 - 5",
-      desc: "Developing critical thinking, project-based learning, and academic discipline.",
+      desc: "Developing critical thinking, project-based learning, and academic discipline",
       icon: <FaBookOpen />
     }
   ];
